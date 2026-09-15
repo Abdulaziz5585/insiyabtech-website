@@ -31,15 +31,28 @@ jobs:
           rm -rf _site
           mkdir -p _site
           wget --quiet --recursive --level=3 --page-requisites --convert-links --adjust-extension --no-parent --no-host-directories --directory-prefix=_site https://insiyabtech.com.sa/ || true
+
+          # Rebuild the controlled pages from the repository sources.
           cat payload_text/index/part*.txt > _site/index.html
           cp solutions.html _site/solutions.html
+
+          # Verify source integrity before deployment-only rewrites.
+          echo "7742d95149c03c89df9b688f3e5ebabd4dd8ee6d3f2da1ba7c95af4b738ee609  _site/index.html" | sha256sum -c -
+          echo "fb3b32e6a1ed82bc8ebc35839c0c457e2a4a9e340edc1199560608115929ef00  _site/solutions.html" | sha256sum -c -
+
           cp CNAME _site/CNAME
           mkdir -p _site/assets
           cp assets/insiyab-mark.webp _site/assets/insiyab-mark.webp
           cp assets/insiyab-mark.png _site/assets/insiyab-mark.png
+          cp assets/insiyab-mark-v4.svg _site/assets/insiyab-mark-v4.svg
+
+          # Force every page to use one clean, cache-busted logo asset.
+          find _site -type f -name '*.html' -print0 | xargs -0 sed -i \
+            -e 's#assets/insiyab-mark\.webp#assets/insiyab-mark-v4.svg?v=4#g' \
+            -e 's#assets/insiyab-mark\.png#assets/insiyab-mark-v4.svg?v=4#g' \
+            -e 's#type="image/png" href="assets/insiyab-mark-v4\.svg?v=4"#type="image/svg+xml" href="assets/insiyab-mark-v4.svg?v=4"#g'
+
           touch _site/.nojekyll
-          echo "7742d95149c03c89df9b688f3e5ebabd4dd8ee6d3f2da1ba7c95af4b738ee609  _site/index.html" | sha256sum -c -
-          echo "fb3b32e6a1ed82bc8ebc35839c0c457e2a4a9e340edc1199560608115929ef00  _site/solutions.html" | sha256sum -c -
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
