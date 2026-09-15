@@ -10,10 +10,6 @@ permissions:
   pages: write
   id-token: write
 
-concurrency:
-  group: pages
-  cancel-in-progress: true
-
 jobs:
   deploy:
     environment:
@@ -23,36 +19,32 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
       - name: Build site
         shell: bash
         run: |
           set -euo pipefail
+          echo "Index payload diagnostics:"
+          wc -c payload_index/part00 payload_index/part01
+          sha256sum payload_index/part00 payload_index/part01
+          echo "Solutions payload diagnostics:"
+          wc -c payload_solutions/part00
+          sha256sum payload_solutions/part00
           rm -rf _site
           mkdir -p _site
-
-          # Bring across the existing public site's supporting pages/assets.
           wget --quiet --recursive --level=3 --page-requisites --convert-links --adjust-extension --no-parent --no-host-directories --directory-prefix=_site https://insiyabtech.com.sa/ || true
-
-          # Rebuild the approved V29 interactive homepage and Solutions page.
           cat payload_index/part* | tr -d '\n\r' | base64 --decode | gzip -dc > _site/index.html
           cat payload_solutions/part* | tr -d '\n\r' | base64 --decode | gzip -dc > _site/solutions.html
-
           mkdir -p _site/assets
           cp assets/insiyab-mark.webp _site/assets/insiyab-mark.webp
           touch _site/.nojekyll
-
           test -s _site/index.html
           test -s _site/solutions.html
-
       - name: Configure Pages
         uses: actions/configure-pages@v5
-
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: _site
-
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
