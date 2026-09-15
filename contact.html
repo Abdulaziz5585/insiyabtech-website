@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6P2CM4PPHQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-6P2CM4PPHQ');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تواصل معنا | انسياب تيك</title>
+  <link rel="icon" type="image/svg+xml" href="assets/insiyab-mark-v4.svg?v=5">
+  
+  
+  
+  
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* انسياب تيك - Light Premium Theme */
+
+:root {
+  /* Backgrounds */
+  --bg: #ffffff;
+  --bg-soft: #faf8f3;
+  --bg-section: #fbfaf6;
+  --bg-card: #ffffff;
+  --bg-dark: #0f1729;
+
+  /* Lines */
+  --line: #ece6d8;
+  --line-soft: rgba(15, 23, 41, 0.06);
+  --line-strong: #d9d2c0;
+
+  /* Ink (text) */
+  --ink: #0f1729;
+  --ink-soft: #4a5570;
+  --ink-muted: #7a8499;
+  --ink-faint: #adb4c4;
+  --ink-inverse: #fefcf7;
+
+  /* Brand colors */
+  --gold: #c89548;
+  --gold-bright: #e8b048;
+  --gold-dark: #a87a30;
+  --gold-soft: #f5ead0;
+  --coral: #f43f5e;
+  --coral-soft: #fde2e7;
+  --violet: #7c3aed;
+  --violet-soft: #ede4fc;
+  --mint: #14b8a6;
+  --mint-soft: #d4f4ef;
+  --navy: #0f1729;
+
+  /* Gradients */
+  --grad-warm: linear-gradient(135deg, #c89548 0%, #f43f5e 100%);
+  --grad-cool: linear-gradient(135deg, #14b8a6 0%, #7c3aed 100%);
+  --grad-primary: linear-gradient(135deg, #c89548 0%, #f43f5e 50%, #7c3aed 100%);
+  --grad-soft: linear-gradient(135deg, rgba(200, 149, 72, 0.08), rgba(124, 58, 237, 0.06));
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(15, 23, 41, 0.05), 0 1px 2px rgba(15, 23, 41, 0.04);
+  --shadow-md: 0 8px 24px -8px rgba(15, 23, 41, 0.12), 0 2px 6px rgba(15, 23, 41, 0.04);
+  --shadow-lg: 0 24px 50px -16px rgba(15, 23, 41, 0.15), 0 6px 14px rgba(15, 23, 41, 0.06);
+  --shadow-xl: 0 32px 80px -20px rgba(15, 23, 41, 0.2), 0 10px 20px rgba(15, 23, 41, 0.08);
+  --shadow-gold: 0 12px 32px -8px rgba(200, 149, 72, 0.4);
+
+  /* Fonts */
+  --font-display: 'IBM Plex Sans Arabic', sans-serif;
+  --font-body: 'IBM Plex Sans Arabic', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --max-width: 1280px;
+  --radius: 18px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.65;
+  overflow-x: hidden;
+  min-height: 100vh;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Subtle ambient gradient */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 50% at 80% 0%, rgba(200, 149, 72, 0.06), transparent 70%),
+    radial-gradient(ellipse 50% 40% at 0% 80%, rgba(124, 58, 237, 0.04), transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* Navigation */
+nav {
+  position: fixed; top: 0; right: 0; left: 0; z-index: 100;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  background: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid var(--line-soft);
+}
+.nav-inner {
+  max-width: var(--max-width); margin: 0 auto; padding: 14px 32px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--ink); }
+.brand-mark { width: 42px; height: 42px; }
+.brand-mark svg { width: 100%; height: 100%; }
+.brand-name {
+  font-family: var(--font-display);
+  font-size: 1.25rem; font-weight: 700;
+  letter-spacing: -0.01em; line-height: 1;
+}
+.brand-name span {
+  background: var(--grad-warm);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
+.nav-links { display: flex; gap: 32px; align-items: center; list-style: none; }
+.nav-links a {
+  color: var(--ink-soft); text-decoration: none;
+  font-size: 0.94rem; font-weight: 500;
+  transition: color 0.2s; position: relative;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--ink); }
+.nav-links a.active::after {
+  content: ''; position: absolute; bottom: -7px;
+  right: 0; left: 0; height: 2px;
+  background: var(--grad-warm); border-radius: 2px;
+}
+.nav-cta {
+  background: var(--navy);
+  color: white !important;
+  padding: 10px 22px; border-radius: 999px;
+  font-weight: 600; font-size: 0.9rem;
+  transition: all 0.25s;
+  box-shadow: var(--shadow-md);
+}
+.nav-cta:hover {
+  background: var(--grad-warm);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-gold);
+}
+.nav-cta::after { display: none !important; }
+.menu-toggle { display: none; background: none; border: none; color: var(--ink); cursor: pointer; }
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 16px 28px; border-radius: 12px;
+  font-weight: 600; font-size: 1rem;
+  text-decoration: none; transition: all 0.25s;
+  cursor: pointer; border: none; font-family: inherit;
+  position: relative; overflow: hidden;
+}
+.btn-primary {
+  background: var(--navy);
+  color: white;
+  box-shadow: var(--shadow-md);
+}
+.btn-primary::before {
+  content: ''; position: absolute; inset: 0;
+  background: var(--grad-warm);
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 0;
+}
+.btn-primary > * { position: relative; z-index: 1; }
+.btn-primary:hover::before { opacity: 1; }
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-gold);
+}
+.btn-gold {
+  background: var(--grad-warm);
+  color: white;
+  box-shadow: var(--shadow-gold);
+}
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px -10px rgba(200, 149, 72, 0.5);
+}
+.btn-ghost {
+  background: white;
+  color: var(--ink);
+  border: 1px solid var(--line-strong);
+}
+.btn-ghost:hover {
+  border-color: var(--gold);
+  background: var(--gold-soft);
+  transform: translateY(-2px);
+}
+.btn svg { transition: transform 0.2s; }
+.btn:hover svg { transform: translateX(-3px); }
+
+/* Sections */
+section { padding: 100px 0; position: relative; }
+
+.section-head { margin-bottom: 60px; max-width: 760px; }
+.section-head.center { text-align: center; margin-right: auto; margin-left: auto; }
+.section-eyebrow {
+  font-family: var(--font-mono); font-size: 0.78rem;
+  color: var(--gold-dark);
+  text-transform: uppercase; letter-spacing: 0.12em;
+  margin-bottom: 18px;
+  display: flex; align-items: center; gap: 12px;
+  font-weight: 600;
+}
+.section-head.center .section-eyebrow { justify-content: center; }
+.section-eyebrow::before {
+  content: ''; width: 28px; height: 1.5px;
+  background: var(--grad-warm); border-radius: 2px;
+}
+h2.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 700; letter-spacing: -0.02em;
+  line-height: 1.2; margin-bottom: 20px;
+  color: var(--ink);
+}
+h2.section-title .light { color: var(--ink-muted); font-weight: 400; }
+h2.section-title .gradient {
+  background: var(--grad-primary);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.section-desc {
+  font-size: 1.08rem; color: var(--ink-soft); line-height: 1.75;
+}
+
+/* Footer */
+footer {
+  background: var(--bg-dark);
+  color: rgba(255, 255, 255, 0.7);
+  padding: 70px 0 32px;
+  position: relative; z-index: 2;
+}
+.footer-grid {
+  display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 48px; margin-bottom: 48px;
+}
+.footer-brand-block .brand { color: white; }
+.footer-brand-block .brand-name { color: white; }
+.footer-brand-block p {
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 16px; line-height: 1.7;
+  font-size: 0.94rem; max-width: 320px;
+}
+.footer-col h4 {
+  font-family: var(--font-display);
+  font-size: 0.94rem; color: white;
+  margin-bottom: 20px; font-weight: 700;
+}
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 12px; }
+.footer-col a {
+  color: rgba(255, 255, 255, 0.55);
+  text-decoration: none;
+  font-size: 0.91rem; transition: color 0.2s;
+}
+.footer-col a:hover { color: var(--gold-bright); }
+.footer-bottom {
+  padding-top: 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 0.85rem; color: rgba(255, 255, 255, 0.45);
+  flex-wrap: wrap; gap: 16px;
+}
+.socials { display: flex; gap: 14px; align-items: center; }
+.socials a {
+  display: flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px; border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.7);
+  transition: background 0.2s, color 0.2s;
+  text-decoration: none;
+}
+.socials a:hover {
+  background: var(--grad-warm);
+  color: #fff;
+}
+.socials svg { width: 18px; height: 18px; }
+
+/* Reveal animations */
+.reveal {
+  opacity: 0; transform: translateY(28px);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.in { opacity: 1; transform: translateY(0); }
+.reveal-scale {
+  opacity: 0; transform: scale(0.94);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-scale.in { opacity: 1; transform: scale(1); }
+
+/* Page hero (inner pages) */
+.page-hero { padding: 140px 0 60px; position: relative; }
+.page-hero::after {
+  content: ''; position: absolute;
+  bottom: 0; right: 10%; left: 10%;
+  height: 1px;
+  background: linear-gradient(to left, transparent, var(--gold), var(--violet), transparent);
+  opacity: 0.3;
+}
+.page-hero .breadcrumb {
+  font-family: var(--font-mono); font-size: 0.8rem;
+  color: var(--gold-dark);
+  text-transform: uppercase; letter-spacing: 0.1em;
+  margin-bottom: 20px; font-weight: 600;
+}
+.page-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+  font-weight: 700; letter-spacing: -0.025em;
+  line-height: 1.15; margin-bottom: 20px; max-width: 920px;
+  color: var(--ink);
+}
+.page-hero h1 .accent {
+  background: var(--grad-primary);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.page-hero .subtitle {
+  font-size: 1.18rem; color: var(--ink-soft);
+  max-width: 760px; line-height: 1.7;
+}
+
+/* WhatsApp floating */
+.wa-float {
+  position: fixed; bottom: 24px; left: 24px; z-index: 90;
+  width: 58px; height: 58px;
+  background: linear-gradient(135deg, #25d366, #128c7e);
+  border-radius: 50%; display: grid; place-items: center;
+  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+  text-decoration: none; color: white;
+  transition: transform 0.3s;
+  animation: wa-pulse 2.5s ease-in-out infinite;
+}
+.wa-float:hover { transform: scale(1.1) rotate(-5deg); }
+.wa-float svg { width: 28px; height: 28px; }
+@keyframes wa-pulse {
+  0%, 100% { box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4), 0 0 0 0 rgba(37, 211, 102, 0.5); }
+  50% { box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4), 0 0 0 18px rgba(37, 211, 102, 0); }
+}
+
+@media (max-width: 1024px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 720px) {
+  .container { padding: 0 20px; }
+  nav .nav-links { display: none; }
+  nav .menu-toggle { display: block; }
+  .nav-cta { display: none; }
+  section { padding: 70px 0; }
+  .page-hero { padding: 110px 0 40px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .wa-float { bottom: 16px; left: 16px; width: 52px; height: 52px; }
+  .wa-float svg { width: 26px; height: 26px; }
+}
+
+  nav .nav-links.nav-open {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 75%;
+    max-width: 300px;
+    height: 100vh;
+    background: var(--bg, #ffffff);
+    box-shadow: -4px 0 24px rgba(0,0,0,0.12);
+    padding: 80px 28px 40px;
+    gap: 8px;
+    z-index: 9999;
+    overflow-y: auto;
+  }
+  nav .nav-links.nav-open a {
+    font-size: 1.1rem;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.07);
+    display: block;
+  }
+  nav .nav-links.nav-open .nav-cta {
+    display: block !important;
+    margin-top: 16px;
+    text-align: center;
+  }
+</style>
+
+<style>
+  .contact-wrap { display: grid; grid-template-columns: 1fr 1.2fr; gap: 50px; align-items: start; }
+  .contact-info { display: flex; flex-direction: column; gap: 14px; }
+  .channel-card {
+    background: white; border: 1px solid var(--line-soft);
+    border-radius: 16px; padding: 22px 24px;
+    display: flex; align-items: center; gap: 16px;
+    transition: all 0.3s;
+    text-decoration: none; color: inherit;
+    box-shadow: var(--shadow-sm);
+  }
+  .channel-card:hover { transform: translateX(-6px); border-color: var(--gold); box-shadow: var(--shadow-md); }
+  .channel-icon {
+    width: 52px; height: 52px;
+    background: var(--gold-soft);
+    color: var(--gold-dark);
+    border-radius: 13px;
+    display: grid; place-items: center;
+    flex-shrink: 0;
+    transition: transform 0.3s;
+  }
+  .channel-card:hover .channel-icon { transform: rotate(-5deg) scale(1.05); }
+  .channel-card.wa .channel-icon { background: rgba(37, 211, 102, 0.12); color: #25d366; }
+  .channel-card.email .channel-icon { background: var(--violet-soft); color: var(--violet); }
+  .channel-icon svg { width: 22px; height: 22px; }
+  .channel-card.wa .channel-icon svg { fill: currentColor; stroke: none; }
+  .channel-label { font-family: var(--font-mono); font-size: 0.74rem; color: var(--ink-muted); margin-bottom: 4px; letter-spacing: 0.05em; }
+  .channel-value { font-family: var(--font-display); font-size: 1.05rem; font-weight: 600; color: var(--ink); }
+
+  .hours-card {
+    background: white; border: 1px solid var(--line-soft);
+    border-radius: 16px; padding: 24px; margin-top: 6px;
+    box-shadow: var(--shadow-sm);
+  }
+  .hours-card h4 {
+    font-family: var(--font-display); font-size: 1.05rem;
+    font-weight: 700; margin-bottom: 16px; color: var(--ink);
+    display: flex; align-items: center; gap: 10px;
+  }
+  .hours-card h4 svg { color: var(--gold-dark); width: 18px; height: 18px; }
+  .hours-row {
+    display: flex; justify-content: space-between;
+    padding: 11px 0; font-size: 0.94rem;
+    border-bottom: 1px dashed var(--line-soft);
+  }
+  .hours-row:last-child { border-bottom: none; }
+  .hours-row .day { color: var(--ink-soft); }
+  .hours-row .time { color: var(--ink); font-family: var(--font-mono); font-size: 0.9rem; font-weight: 500; }
+  .hours-highlight {
+    margin-top: 14px; padding: 12px 16px;
+    background: linear-gradient(135deg, #ecfdf5, #f0fdf4);
+    border: 1px solid rgba(20, 184, 166, 0.2);
+    border-radius: 11px;
+    display: flex; align-items: center; gap: 10px;
+    font-size: 0.88rem; color: #065f46;
+  }
+  .hours-highlight::before {
+    content: ''; width: 8px; height: 8px;
+    background: #10b981; border-radius: 50%;
+    box-shadow: 0 0 12px #10b981;
+    animation: pulse-dot 2s ease-in-out infinite;
+    flex-shrink: 0;
+  }
+  @keyframes pulse-dot {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(1.3); }
+  }
+
+  .form-card {
+    background: white; border: 1px solid var(--line);
+    border-radius: 22px; padding: 44px;
+    position: relative; overflow: hidden;
+    box-shadow: var(--shadow-md);
+  }
+  .form-card::before {
+    content: ''; position: absolute;
+    top: 0; right: 0; left: 0; height: 3px;
+    background: var(--grad-primary);
+  }
+  .form-card h2 { font-family: var(--font-display); font-size: 1.6rem; font-weight: 700; margin-bottom: 12px; color: var(--ink); letter-spacing: -0.01em; }
+  .form-card .lead { color: var(--ink-soft); line-height: 1.7; margin-bottom: 28px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+  .form-group { margin-bottom: 14px; }
+  .form-group label { display: block; font-size: 0.86rem; color: var(--ink-soft); margin-bottom: 7px; font-weight: 500; }
+  .form-group input, .form-group select, .form-group textarea {
+    width: 100%; padding: 13px 16px;
+    background: var(--bg-soft);
+    border: 1px solid var(--line);
+    border-radius: 11px;
+    color: var(--ink); font-family: inherit; font-size: 0.94rem;
+    transition: all 0.2s;
+  }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    outline: none; border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(200, 149, 72, 0.1);
+    background: white;
+  }
+  .form-group textarea { resize: vertical; min-height: 110px; font-family: inherit; }
+  .form-submit {
+    margin-top: 6px; width: 100%; padding: 17px 28px;
+    background: var(--grad-warm); color: white; border: none;
+    border-radius: 13px; font-family: inherit;
+    font-weight: 700; font-size: 1rem;
+    cursor: pointer; transition: all 0.25s;
+    box-shadow: var(--shadow-gold);
+  }
+  .form-submit:hover { transform: translateY(-2px); box-shadow: 0 16px 36px -8px rgba(200, 149, 72, 0.5); }
+  .form-note { margin-top: 16px; text-align: center; font-size: 0.84rem; color: var(--ink-muted); }
+
+  /* Location */
+  .location-section { background: var(--bg-section); }
+  .location-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+  .location-visual {
+    aspect-ratio: 4/3; border-radius: 22px; overflow: hidden;
+    border: 1px solid var(--line);
+    background: linear-gradient(135deg, #fff8e7, #fff);
+    position: relative;
+    display: grid; place-items: center;
+    box-shadow: var(--shadow-lg);
+  }
+  .map-pin {
+    width: 80px; height: 80px;
+    background: var(--grad-warm);
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    box-shadow: var(--shadow-gold);
+    display: grid; place-items: center;
+    position: relative; z-index: 2;
+  }
+  .map-pin::before { content: ''; position: absolute; inset: 12px; border-radius: 50%; background: white; }
+  .map-pin svg { width: 26px; height: 26px; color: var(--gold-dark); transform: rotate(45deg); z-index: 1; position: relative; }
+  .map-ripple {
+    position: absolute;
+    border: 1.5px solid var(--gold);
+    border-radius: 50%;
+    opacity: 0; animation: ripple 3s ease-out infinite;
+  }
+  .map-ripple:nth-child(2) { animation-delay: 1s; }
+  .map-ripple:nth-child(3) { animation-delay: 2s; }
+  @keyframes ripple {
+    0% { width: 80px; height: 80px; opacity: 0.6; }
+    100% { width: 380px; height: 380px; opacity: 0; }
+  }
+  .location-info h2 { font-family: var(--font-display); font-size: 1.9rem; font-weight: 700; margin-bottom: 14px; color: var(--ink); letter-spacing: -0.01em; }
+  .location-info p { color: var(--ink-soft); line-height: 1.8; margin-bottom: 20px; }
+  .location-tags { display: flex; gap: 10px; flex-wrap: wrap; }
+  .location-tag {
+    padding: 8px 16px;
+    background: white; border: 1px solid var(--line);
+    border-radius: 999px;
+    font-size: 0.85rem; color: var(--ink);
+    box-shadow: var(--shadow-sm);
+  }
+
+  @media (max-width: 1024px) {
+    .contact-wrap, .location-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 720px) {
+    .form-card { padding: 32px 22px; }
+    .form-row { grid-template-columns: 1fr; }
+  }
+  nav .nav-links.nav-open {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 75%;
+    max-width: 300px;
+    height: 100vh;
+    background: var(--bg, #ffffff);
+    box-shadow: -4px 0 24px rgba(0,0,0,0.12);
+    padding: 80px 28px 40px;
+    gap: 8px;
+    z-index: 9999;
+    overflow-y: auto;
+  }
+  nav .nav-links.nav-open a {
+    font-size: 1.1rem;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.07);
+    display: block;
+  }
+  nav .nav-links.nav-open .nav-cta {
+    display: block !important;
+    margin-top: 16px;
+    text-align: center;
+  }
+</style>
+<style id="insiyab-global-polish">.it-nav-lang{font-family:Poppins,system-ui,sans-serif!important;font-size:.72rem!important;letter-spacing:.03em!important;border:1px solid rgba(15,23,41,.12);border-radius:10px;padding:8px 11px!important}.it-nav-lang:hover{border-color:#ff5a47!important}.brand img{filter:none!important;mix-blend-mode:normal!important;opacity:1!important}.nav-inner{gap:14px}.nav-links{gap:14px!important}.nav-links a{white-space:nowrap}@media(max-width:1180px){.nav-links{gap:10px!important}.nav-links a{font-size:.82rem!important}.it-nav-lang{padding:7px 9px!important}}@media(max-width:980px){.it-nav-lang{border:0;padding:12px 0!important}}</style>
+<meta name="description" content="تواصل مع انسياب تيك لمناقشة احتياجك في الذكاء الاصطناعي والأتمتة وتكامل الأنظمة وبناء نموذج أولي عملي.">
+<link rel="canonical" href="https://insiyabtech.com.sa/contact.html">
+<meta property="og:locale" content="ar_SA">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="InsiyabTech">
+<meta property="og:title" content="تواصل معنا | انسياب تيك">
+<meta property="og:description" content="تواصل مع انسياب تيك لمناقشة احتياجك في الذكاء الاصطناعي والأتمتة وتكامل الأنظمة وبناء نموذج أولي عملي.">
+<meta property="og:url" content="https://insiyabtech.com.sa/contact.html">
+<meta property="og:image" content="https://insiyabtech.com.sa/assets/insiyab-mark-v4.svg?v=5?v=5">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="تواصل معنا | انسياب تيك">
+<meta name="twitter:description" content="تواصل مع انسياب تيك لمناقشة احتياجك في الذكاء الاصطناعي والأتمتة وتكامل الأنظمة وبناء نموذج أولي عملي.">
+<meta name="twitter:image" content="https://insiyabtech.com.sa/assets/insiyab-mark-v4.svg?v=5?v=5">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"InsiyabTech","alternateName":"انسياب تيك","url":"https://insiyabtech.com.sa","logo":"https://insiyabtech.com.sa/assets/insiyab-mark-v4.svg?v=5?v=5","email":"info@insiyabtech.com.sa","sameAs":["https://x.com/insiyabtech","https://www.instagram.com/insiyabtech/","https://www.tiktok.com/@insiyabtech"]}</script>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <img src="assets/insiyab-mark-v4.svg?v=5" alt="InsiyabTech" style="height:46px;width:auto;display:block;flex-shrink:0;"><span style="display:flex;flex-direction:column;gap:1px;line-height:1.15;"><span style="font-family:'Poppins',sans-serif;font-size:1.05rem;font-weight:700;color:#0f1729;letter-spacing:-0.01em;">Insiyab<span style="background:linear-gradient(90deg,#f97316,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Tech</span></span><span style="font-family:'IBM Plex Sans Arabic',sans-serif;font-size:1.05rem;font-weight:700;color:#0f1729;">انسياب <span style="background:linear-gradient(90deg,#f97316,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">تيك</span></span></span>
+    </a>
+    <ul class="nav-links">
+<li><a href="index.html">الرئيسية</a></li><li><a href="about.html">من نحن</a></li><li><a href="services.html">الخدمات</a></li><li><a href="solutions.html">الحلول</a></li><li><a href="index.html#work">نماذج الأعمال</a></li><li><a href="blog.html">المعرفة</a></li><li><a href="contact.html">تواصل معنا</a></li><li><a href="index.html" class="it-nav-lang" onclick="try{localStorage.setItem('insiyab-lang','en')}catch(e){}">ENGLISH</a></li>
+</ul>
+    <button class="menu-toggle"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">الرئيسية / اتصل بنا</div>
+    <h1>تواصل معنا <span class="accent">— لنرَ معًا</span> أين يَنساب عملك.</h1>
+    <p class="subtitle">اختر الطريقة الأسرع لك: تحدّث معنا مباشرة على واتساب، أو املأ النموذج وسنعود إليك خلال يوم عمل واحد.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="contact-wrap">
+
+      <div class="contact-info">
+        <a href="https://wa.me/966532544447" target="_blank" class="channel-card wa reveal">
+          <div class="channel-icon">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          </div>
+          <div>
+            <div class="channel-label">واتساب — الأسرع للردّ</div>
+            <div class="channel-value">0532544447</div>
+          </div>
+        </a>
+
+        <a href="mailto:info@insiyabtech.com.sa" class="channel-card email reveal">
+          <div class="channel-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <div class="channel-label">البريد الإلكتروني الرسمي</div>
+            <div class="channel-value">info@insiyabtech.com.sa</div>
+          </div>
+        </a>
+
+        <div class="channel-card reveal">
+          <div class="channel-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <div class="channel-label">العنوان</div>
+            <div class="channel-value">القصيم — المملكة العربيّة السعوديّة</div>
+          </div>
+        </div>
+
+        <div class="hours-card reveal">
+          <h4>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            ساعات العمل
+          </h4>
+          <div class="hours-row">
+            <span class="day">السبت — الخميس</span>
+            <span class="time">8:00 ص — 9:00 م</span>
+          </div>
+          <div class="hours-row">
+            <span class="day">الجمعة</span>
+            <span class="time">8:00 ص — 9:00 م</span>
+          </div>
+          <div class="hours-highlight">متاحون يوميًّا من الـ8 صباحًا إلى الـ9 مساءً</div>
+        </div>
+      </div>
+
+      <div class="form-card reveal">
+        <h2>أرسل لنا تفاصيل مشروعك</h2>
+        <p class="lead">كلّما زاد التفصيل، كان ردّنا أدقّ. لا تقلق إن لم تكن متأكّدًا من كلّ شيء.</p>
+
+        <!-- Formspree-connected form. Replace mykvkore after signup. -->
+        <form action="https://formspree.io/f/mykvkore" method="POST" id="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">الاسم الكامل *</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="company">اسم المنشأة</label>
+              <input type="text" id="company" name="company">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">رقم الجوّال *</label>
+              <input type="tel" id="phone" name="phone" placeholder="05xxxxxxxx" required>
+            </div>
+            <div class="form-group">
+              <label for="email">البريد الإلكتروني *</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="sector">القطاع</label>
+            <select id="sector" name="sector">
+              <option value="">— اختر —</option>
+              <option>عيادات طبيّة</option>
+              <option>توزيع ومستودعات</option>
+              <option>متجر إلكتروني</option>
+              <option>مكتب عقاري</option>
+              <option>مكتب محاسبة</option>
+              <option>مطاعم ومقاهي</option>
+              <option>أخرى</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="service">الخدمة المطلوبة</label>
+            <select id="service" name="service">
+              <option value="">— اختر —</option>
+              <option>بناء وكيل ذكاء اصطناعي</option>
+              <option>أتمتة سير العمل</option>
+              <option>لوحات بيانات وتقارير</option>
+              <option>دمج أنظمة</option>
+              <option>أتمتة تقارير دوريّة</option>
+              <option>استشارة تحوّل رقمي</option>
+              <option>غير متأكّد — أحتاج تشخيصًا</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="msg">حدّثنا عن وضعك الحالي</label>
+            <textarea id="msg" name="message" placeholder="ما العمليّة التي تستنزف وقتك أكثر؟ ما الذي جرّبته قبل؟"></textarea>
+          </div>
+
+          <input type="hidden" name="_subject" value="طلب جديد من موقع انسياب تيك">
+          <input type="text" name="_gotcha" style="display:none">
+
+          <button type="submit" class="form-submit">إرسال الطلب →</button>
+          <p class="form-note">معلوماتك في أمان — لن تُشارَك مع أيّ طرف ثالث.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="location-section">
+  <div class="container">
+    <div class="location-grid">
+      <div class="reveal">
+        <div class="location-visual">
+            <svg viewBox="0 0 500 420" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;padding:8px">
+              <defs>
+                <linearGradient id="saGrad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#f5ead0"/>
+                  <stop offset="1" stop-color="#fde8dc"/>
+                </linearGradient>
+                <filter id="mapShadow">
+                  <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#c89548" flood-opacity="0.15"/>
+                </filter>
+              </defs>
+              <!-- خريطة المملكة العربية السعودية -->
+              <path filter="url(#mapShadow)" fill="url(#saGrad)" stroke="#c89548" stroke-width="2" stroke-linejoin="round"
+                d="M155,28 L162,25 L170,22 L180,20 L192,19 L205,18 L218,18 L230,19 L242,21 L252,23 L260,26 L268,30 L274,35 L278,40 L280,46 L285,44 L292,42 L300,41 L308,42 L315,45 L320,50 L322,56 L325,54 L330,52 L336,51 L342,52 L347,55 L350,60 L350,66 L353,65 L358,64 L364,65 L368,68 L370,73 L369,79 L373,78 L378,79 L382,83 L382,89 L379,94 L383,95 L387,99 L387,105 L384,110 L378,113 L382,116 L384,122 L382,128 L376,132 L370,133 L371,138 L369,144 L364,148 L358,149 L353,147 L350,153 L345,158 L338,161 L332,160 L328,157 L322,163 L315,168 L307,171 L300,170 L295,167 L290,174 L282,180 L273,184 L264,185 L258,182 L252,190 L244,198 L235,204 L226,207 L218,205 L213,213 L206,222 L198,232 L190,243 L183,254 L177,264 L172,273 L168,281 L165,288 L162,295 L159,302 L156,308 L154,313 L151,317 L148,320 L145,323 L142,322 L139,318 L136,312 L133,305 L130,297 L127,289 L124,280 L121,271 L118,262 L115,253 L112,244 L109,234 L106,224 L103,215 L100,208 L97,204 L93,202 L89,203 L85,206 L80,208 L75,207 L70,203 L66,197 L63,190 L61,183 L60,176 L60,169 L61,162 L63,155 L65,148 L67,141 L68,134 L67,127 L65,120 L62,113 L59,106 L56,99 L54,92 L53,85 L52,78 L52,71 L53,64 L55,57 L58,51 L62,45 L67,40 L73,36 L80,33 L88,30 L97,28 L106,27 L115,26 L124,26 L133,26 L142,27 L150,28 Z"/>
+              <!-- عسير والجنوب -->
+              <path fill="url(#saGrad)" stroke="#c89548" stroke-width="1.5" opacity="0.9"
+                d="M53,85 L45,90 L38,97 L33,106 L30,116 L30,126 L33,135 L38,143 L45,149 L52,152 L60,151 L63,148 L60,140 L58,132 L57,124 L58,116 L60,108 L62,100 L60,92 Z"/>
+              <!-- تبوك وخليج العقبة -->
+              <path fill="url(#saGrad)" stroke="#c89548" stroke-width="1.5" opacity="0.9"
+                d="M52,64 L46,60 L40,55 L35,48 L32,40 L33,32 L37,26 L43,22 L50,20 L57,21 L63,26 L67,33 L68,42 L66,50 L62,57 Z"/>
+              <!-- نقطة القصيم -->
+              <circle cx="195" cy="145" r="22" fill="#c89548" opacity="0.1"/>
+              <circle cx="195" cy="145" r="6" fill="#c89548"/>
+              <circle cx="195" cy="145" r="6" fill="#f43f5e" opacity="0.85">
+                <animate attributeName="r" values="6;20;6" dur="2.2s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0.85;0;0.85" dur="2.2s" repeatCount="indefinite"/>
+              </circle>
+              <text x="204" y="138" font-size="10" fill="#c89548" font-weight="800" font-family="IBM Plex Sans Arabic,sans-serif">القصيم</text>
+              <!-- الرياض -->
+              <circle cx="255" cy="210" r="5" fill="#7c3aed" opacity="0.85"/>
+              <circle cx="255" cy="210" r="5" fill="#7c3aed" opacity="0.25"><animate attributeName="r" values="5;14;5" dur="3s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.25;0;0.25" dur="3s" repeatCount="indefinite"/></circle>
+              <text x="262" y="207" font-size="9" fill="#7c3aed" font-weight="700" font-family="IBM Plex Sans Arabic,sans-serif">الرياض</text>
+              <!-- جدة -->
+              <circle cx="78" cy="195" r="4.5" fill="#14b8a6" opacity="0.9"/>
+              <circle cx="78" cy="195" r="4.5" fill="#14b8a6" opacity="0.25"><animate attributeName="r" values="4.5;12;4.5" dur="3.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.25;0;0.25" dur="3.5s" repeatCount="indefinite"/></circle>
+              <text x="50" y="191" font-size="9" fill="#14b8a6" font-weight="700" font-family="IBM Plex Sans Arabic,sans-serif">جدّة</text>
+              <!-- الدمام -->
+              <circle cx="340" cy="165" r="4.5" fill="#f43f5e" opacity="0.85"/>
+              <circle cx="340" cy="165" r="4.5" fill="#f43f5e" opacity="0.25"><animate attributeName="r" values="4.5;12;4.5" dur="4s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.25;0;0.25" dur="4s" repeatCount="indefinite"/></circle>
+              <text x="346" y="162" font-size="9" fill="#f43f5e" font-weight="700" font-family="IBM Plex Sans Arabic,sans-serif">الدمام</text>
+              <!-- حائل -->
+              <circle cx="165" cy="105" r="4" fill="#c89548" opacity="0.8"/>
+              <text x="170" y="102" font-size="9" fill="#c89548" font-weight="600" font-family="IBM Plex Sans Arabic,sans-serif">حائل</text>
+              <!-- مكة -->
+              <circle cx="75" cy="225" r="4" fill="#14b8a6" opacity="0.7"/>
+              <text x="50" y="234" font-size="8.5" fill="#14b8a6" font-family="IBM Plex Sans Arabic,sans-serif">مكة</text>
+              <!-- المدينة -->
+              <circle cx="108" cy="148" r="4" fill="#c89548" opacity="0.7"/>
+              <text x="80" y="145" font-size="8.5" fill="#c89548" font-family="IBM Plex Sans Arabic,sans-serif">المدينة</text>
+              <!-- خطوط الاتصال -->
+              <line x1="195" y1="145" x2="255" y2="210" stroke="#c89548" stroke-width="1.2" stroke-dasharray="5,4" opacity="0.4"/>
+              <line x1="195" y1="145" x2="78" y2="195" stroke="#c89548" stroke-width="1.2" stroke-dasharray="5,4" opacity="0.4"/>
+              <line x1="195" y1="145" x2="340" y2="165" stroke="#c89548" stroke-width="1.2" stroke-dasharray="5,4" opacity="0.4"/>
+              <line x1="195" y1="145" x2="165" y2="105" stroke="#c89548" stroke-width="1" stroke-dasharray="4,3" opacity="0.35"/>
+            </svg>
+        </div>
+      </div>
+
+      <div class="location-info reveal">
+        <div class="section-eyebrow">من القصيم إلى المملكة</div>
+        <h2>قاعدتنا في القصيم، وخدمتنا في كلّ مكان.</h2>
+        <p>نحن متمركزون في منطقة القصيم بالمملكة العربيّة السعوديّة، ونخدم عملاء من جميع مناطق المملكة. معظم تعاملاتنا تتمّ عن بُعد عبر اجتماعات Zoom أو Google Meet، وزيارات ميدانيّة عند الحاجة.</p>
+        <p>ميزتنا أنّنا نفهم لغة السوق المحلي، ونحترم خصوصيّة العميل السعودي، ونتعامل بأسلوب يَفهم ثقافة الأعمال في المنطقة دون تعقيد.</p>
+        <div class="location-tags">
+          <span class="location-tag">القصيم</span>
+          <span class="location-tag">الرياض</span>
+          <span class="location-tag">جدّة</span>
+          <span class="location-tag">الدمّام</span>
+          <span class="location-tag">حائل</span>
+          <span class="location-tag">عن بُعد</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<a href="https://wa.me/966532544447" class="wa-float" target="_blank">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand-block">
+        <a href="index.html" class="brand">
+      <img src="assets/insiyab-mark-v4.svg?v=5" alt="InsiyabTech" style="height:46px;width:auto;display:block;flex-shrink:0;"><span style="display:flex;flex-direction:column;gap:1px;line-height:1.15;"><span style="font-family:'Poppins',sans-serif;font-size:1.05rem;font-weight:700;color:#ffffff;letter-spacing:-0.01em;">Insiyab<span style="background:linear-gradient(90deg,#f97316,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Tech</span></span><span style="font-family:'IBM Plex Sans Arabic',sans-serif;font-size:1.05rem;font-weight:700;color:#ffffff;">انسياب <span style="background:linear-gradient(90deg,#f97316,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">تيك</span></span></span>
+    </a>
+        <p>نبني وكلاء ذكاء اصطناعي وأنظمة أتمتة تُحرّر فريقك من المهامّ التكراريّة.</p>
+      </div>
+      <div class="footer-col"><h4>الموقع</h4><ul><li><a href="index.html">الرئيسية</a></li><li><a href="services.html">الخدمات</a></li><li><a href="guide.html">الدليل</a></li><li><a href="blog.html">المدوّنة</a></li></ul></div>
+      <div class="footer-col"><h4>الشركة</h4><ul><li><a href="about.html">من نحن</a></li><li><a href="contact.html">اتصل بنا</a></li><li><a href="privacy.html">سياسة الخصوصية</a></li><li><a href="terms.html">الشروط والأحكام</a></li></ul></div>
+      <div class="footer-col"><h4>تواصل مباشر</h4><ul><li><a href="https://wa.me/966532544447" target="_blank">واتساب: 0532544447</a></li><li><a href="mailto:info@insiyabtech.com.sa">info@insiyabtech.com.sa</a></li><li><a href="contact.html#">القصيم — المملكة العربيّة السعوديّة</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 انسياب تيك. جميع الحقوق محفوظة.</div>
+      <div class="socials">
+        <a href="https://x.com/insiyabtech" target="_blank" rel="noopener" aria-label="تويتر X">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/insiyabtech/" target="_blank" rel="noopener" aria-label="انستقرام">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="https://www.snapchat.com/add/insiyabtech" target="_blank" rel="noopener" aria-label="سناب شات">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.017 0C8.396 0 5.83 1.973 5.83 5.602v.668c0 .352-.028.7-.085 1.04-.223.131-.46.197-.71.197-.43 0-.84-.163-1.15-.43a.47.47 0 00-.31-.11c-.26 0-.5.2-.5.47 0 .03.004.06.01.09.12.57.63 1.01 1.25 1.18.067.02.134.035.2.047-.06.22-.13.42-.21.6-.46 1.03-1.38 1.73-2.31 1.73-.15 0-.3-.01-.44-.04a.47.47 0 00-.1-.01c-.26 0-.47.21-.47.47 0 .22.15.41.37.46.96.22 1.63.83 1.97 1.79.02.05.05.08.09.08.04 0 .37-.04.82-.04.59 0 1.42.08 2.23.52.7.38 1.27.97 2.46.97 1.17 0 1.76-.59 2.44-.97.81-.44 1.64-.52 2.23-.52.45 0 .78.04.82.04.04 0 .07-.03.09-.08.34-.96 1.01-1.57 1.97-1.79.22-.05.37-.24.37-.46 0-.26-.21-.47-.47-.47-.03 0-.07 0-.1.01-.14.03-.29.04-.44.04-.93 0-1.85-.7-2.31-1.73-.08-.18-.15-.38-.21-.6.066-.012.133-.027.2-.047.62-.17 1.13-.61 1.25-1.18.006-.03.01-.06.01-.09 0-.27-.24-.47-.5-.47-.11 0-.22.04-.31.11-.31.267-.72.43-1.15.43-.25 0-.487-.066-.71-.197a6.16 6.16 0 01-.085-1.04v-.668C18.17 1.973 15.638 0 12.017 0z"/></svg>
+        </a>
+        <a href="https://www.tiktok.com/@insiyabtech" target="_blank" rel="noopener" aria-label="تيك توك">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.76a4.85 4.85 0 01-1.01-.07z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+    // Mobile menu toggle
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navLinks = document.querySelector(".nav-links");
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("nav-open");
+    });
+  }
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal, .reveal-scale').forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>

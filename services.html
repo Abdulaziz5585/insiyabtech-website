@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6P2CM4PPHQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-6P2CM4PPHQ');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الخدمات | انسياب تيك</title>
+  <link rel="icon" type="image/svg+xml" href="assets/insiyab-mark-v4.svg?v=5">
+  
+  
+  
+  
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* انسياب تيك - Light Premium Theme */
+
+:root {
+  /* Backgrounds */
+  --bg: #ffffff;
+  --bg-soft: #faf8f3;
+  --bg-section: #fbfaf6;
+  --bg-card: #ffffff;
+  --bg-dark: #0f1729;
+
+  /* Lines */
+  --line: #ece6d8;
+  --line-soft: rgba(15, 23, 41, 0.06);
+  --line-strong: #d9d2c0;
+
+  /* Ink (text) */
+  --ink: #0f1729;
+  --ink-soft: #4a5570;
+  --ink-muted: #7a8499;
+  --ink-faint: #adb4c4;
+  --ink-inverse: #fefcf7;
+
+  /* Brand colors */
+  --gold: #c89548;
+  --gold-bright: #e8b048;
+  --gold-dark: #a87a30;
+  --gold-soft: #f5ead0;
+  --coral: #f43f5e;
+  --coral-soft: #fde2e7;
+  --violet: #7c3aed;
+  --violet-soft: #ede4fc;
+  --mint: #14b8a6;
+  --mint-soft: #d4f4ef;
+  --navy: #0f1729;
+
+  /* Gradients */
+  --grad-warm: linear-gradient(135deg, #c89548 0%, #f43f5e 100%);
+  --grad-cool: linear-gradient(135deg, #14b8a6 0%, #7c3aed 100%);
+  --grad-primary: linear-gradient(135deg, #c89548 0%, #f43f5e 50%, #7c3aed 100%);
+  --grad-soft: linear-gradient(135deg, rgba(200, 149, 72, 0.08), rgba(124, 58, 237, 0.06));
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(15, 23, 41, 0.05), 0 1px 2px rgba(15, 23, 41, 0.04);
+  --shadow-md: 0 8px 24px -8px rgba(15, 23, 41, 0.12), 0 2px 6px rgba(15, 23, 41, 0.04);
+  --shadow-lg: 0 24px 50px -16px rgba(15, 23, 41, 0.15), 0 6px 14px rgba(15, 23, 41, 0.06);
+  --shadow-xl: 0 32px 80px -20px rgba(15, 23, 41, 0.2), 0 10px 20px rgba(15, 23, 41, 0.08);
+  --shadow-gold: 0 12px 32px -8px rgba(200, 149, 72, 0.4);
+
+  /* Fonts */
+  --font-display: 'IBM Plex Sans Arabic', sans-serif;
+  --font-body: 'IBM Plex Sans Arabic', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --max-width: 1280px;
+  --radius: 18px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.65;
+  overflow-x: hidden;
+  min-height: 100vh;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Subtle ambient gradient */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 50% at 80% 0%, rgba(200, 149, 72, 0.06), transparent 70%),
+    radial-gradient(ellipse 50% 40% at 0% 80%, rgba(124, 58, 237, 0.04), transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* Navigation */
+nav {
+  position: fixed; top: 0; right: 0; left: 0; z-index: 100;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  background: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid var(--line-soft);
+}
+.nav-inner {
+  max-width: var(--max-width); margin: 0 auto; padding: 14px 32px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--ink); }
+.brand-mark { width: 42px; height: 42px; }
+.brand-mark svg { width: 100%; height: 100%; }
+.brand-name {
+  font-family: var(--font-display);
+  font-size: 1.25rem; font-weight: 700;
+  letter-spacing: -0.01em; line-height: 1;
+}
+.brand-name span {
+  background: var(--grad-warm);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
+.nav-links { display: flex; gap: 32px; align-items: center; list-style: none; }
+.nav-links a {
+  color: var(--ink-soft); text-decoration: none;
+  font-size: 0.94rem; font-weight: 500;
+  transition: color 0.2s; position: relative;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--ink); }
+.nav-links a.active::after {
+  content: ''; position: absolute; bottom: -7px;
+  right: 0; left: 0; height: 2px;
+  background: var(--grad-warm); border-radius: 2px;
+}
+.nav-cta {
+  background: var(--navy);
+  color: white !important;
+  padding: 10px 22px; border-radius: 999px;
+  font-weight: 600; font-size: 0.9rem;
+  transition: all 0.25s;
+  box-shadow: var(--shadow-md);
+}
+.nav-cta:hover {
+  background: var(--grad-warm);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-gold);
+}
+.nav-cta::after { display: none !important; }
+.menu-toggle { display: none; background: none; border: none; color: var(--ink); cursor: pointer; }
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 16px 28px; border-radius: 12px;
+  font-weight: 600; font-size: 1rem;
+  text-decoration: none; transition: all 0.25s;
+  cursor: pointer; border: none; font-family: inherit;
+  position: relative; overflow: hidden;
+}
+.btn-primary {
+  background: var(--navy);
+  color: white;
+  box-shadow: var(--shadow-md);
+}
+.btn-primary::before {
+  content: ''; position: absolute; inset: 0;
+  background: var(--grad-warm);
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 0;
+}
+.btn-primary > * { position: relative; z-index: 1; }
+.btn-primary:hover::before { opacity: 1; }
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-gold);
+}
+.btn-gold {
+  background: var(--grad-warm);
+  color: white;
+  box-shadow: var(--shadow-gold);
+}
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px -10px rgba(200, 149, 72, 0.5);
+}
+.btn-ghost {
+  background: white;
+  color: var(--ink);
+  border: 1px solid var(--line-strong);
+}
+.btn-ghost:hover {
+  border-color: var(--gold);
+  background: var(--gold-soft);
+  transform: translateY(-2px);
+}
+.btn svg { transition: transform 0.2s; }
+.btn:hover svg { transform: translateX(-3px); }
+
+/* Sections */
+section { padding: 100px 0; position: relative; }
+
+.section-head { margin-bottom: 60px; max-width: 760px; }
+.section-head.center { text-align: center; margin-right: auto; margin-left: auto; }
+.section-eyebrow {
+  font-family: var(--font-mono); font-size: 0.78rem;
+  color: var(--gold-dark);
+  text-transform: uppercase; letter-spacing: 0.12em;
+  margin-bottom: 18px;
+  display: flex; align-items: center; gap: 12px;
+  font-weight: 600;
+}
+.section-head.center .section-eyebrow { justify-content: center; }
+.section-eyebrow::before {
+  content: ''; width: 28px; height: 1.5px;
+  background: var(--grad-warm); border-radius: 2px;
+}
+h2.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 700; letter-spacing: -0.02em;
+  line-height: 1.2; margin-bottom: 20px;
+  color: var(--ink);
+}
+h2.section-title .light { color: var(--ink-muted); font-weight: 400; }
+h2.section-title .gradient {
+  background: var(--grad-primary);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.section-desc {
+  font-size: 1.08rem; color: var(--ink-soft); line-height: 1.75;
+}
+
+/* Footer */
+footer {
+  background: var(--bg-dark);
+  color: rgba(255, 255, 255, 0.7);
+  padding: 70px 0 32px;
+  position: relative; z-index: 2;
+}
+.footer-grid {
+  display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 48px; margin-bottom: 48px;
+}
+.footer-brand-block .brand { color: white; }
+.footer-brand-block .brand-name { color: white; }
+.footer-brand-block p {
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 16px; line-height: 1.7;
+  font-size: 0.94rem; max-width: 320px;
+}
+.footer-col h4 {
+  font-family: var(--font-display);
+  font-size: 0.94rem; color: white;
+  margin-bottom: 20px; font-weight: 700;
+}
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 12px; }
+.footer-col a {
+  color: rgba(255, 255, 255, 0.55);
+  text-decoration: none;
+  font-size: 0.91rem; transition: color 0.2s;
+}
+.footer-col a:hover { color: var(--gold-bright); }
+.footer-bottom {
+  padding-top: 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 0.85rem; color: rgba(255, 255, 255, 0.45);
+  flex-wrap: wrap; gap: 16px;
+}
+.socials { display: flex; gap: 14px; align-items: center; }
+.socials a {
+  display: flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px; border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.7);
+  transition: background 0.2s, color 0.2s;
+  text-decoration: none;
+}
+.socials a:hover {
+  background: var(--grad-warm);
+  color: #fff;
+}
+.socials svg { width: 18px; height: 18px; }
+
+/* Reveal animations */
+.reveal {
+  opacity: 0; transform: translateY(28px);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.in { opacity: 1; transform: translateY(0); }
+.reveal-scale {
+  opacity: 0; transform: scale(0.94);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-scale.in { opacity: 1; transform: scale(1); }
+
+/* Page hero (inner pages) */
+.page-hero { padding: 140px 0 60px; position: relative; }
+.page-hero::after {
+  content: ''; position: absolute;
+  bottom: 0; right: 10%; left: 10%;
+  height: 1px;
+  background: linear-gradient(to left, transparent, var(--gold), var(--violet), transparent);
+  opacity: 0.3;
+}
+.page-hero .breadcrumb {
+  font-family: var(--font-mono); font-size: 0.8rem;
+  color: var(--gold-dark);
+  text-transform: uppercase; letter-spacing: 0.1em;
+  margin-bottom: 20px; font-weight: 600;
+}
+.page-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+  font-weight: 700; letter-spacing: -0.025em;
+  line-height: 1.15; margin-bottom: 20px; max-width: 920px;
+  color: var(--ink);
+}
+.page-hero h1 .accent {
+  background: var(--grad-primary);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.page-hero .subtitle {
+  font-size: 1.18rem; color: var(--ink-soft);
+  max-width: 760px; line-height: 1.7;
+}
+
+/* WhatsApp floating */
+.wa-float {
+  position: fixed; bottom: 24px; left: 24px; z-index: 90;
+  width: 58px; height: 58px;
+  background: linear-gradient(135deg, #25d366, #128c7e);
+  border-radius: 50%; display: grid; place-items: center;
+  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+  text-decoration: none; color: white;
+  transition: transform 0.3s;
+  animation: wa-pulse 2.5s ease-in-out infinite;
+}
+.wa-float:hover { transform: scale(1.1) rotate(-5deg); }
+.wa-float svg { width: 28px; height: 28px; }
+@keyframes wa-pulse {
+  0%, 100% { box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4), 0 0 0 0 rgba(37, 211, 102, 0.5); }
+  50% { box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4), 0 0 0 18px rgba(37, 211, 102, 0); }
+}
+
+@media (max-width: 1024px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 720px) {
+  .container { padding: 0 20px; }
+  nav .nav-links { display: none; }
+  nav .menu-toggle { display: block; }
+  .nav-cta { display: none; }
+  section { padding: 70px 0; }
+  .page-hero { padding: 110px 0 40px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .wa-float { bottom: 16px; left: 16px; width: 52px; height: 52px; }
+  .wa-float svg { width: 26px; height: 26px; }
+}
+
+  nav .nav-links.nav-open {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 75%;
+    max-width: 300px;
+    height: 100vh;
+    background: var(--bg, #ffffff);
+    box-shadow: -4px 0 24px rgba(0,0,0,0.12);
+    padding: 80px 28px 40px;
+    gap: 8px;
+    z-index: 9999;
+    overflow-y: auto;
+  }
+  nav .nav-links.nav-open a {
+    font-size: 1.1rem;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.07);
+    display: block;
+  }
+  nav .nav-links.nav-open .nav-cta {
+    display: block !important;
+    margin-top: 16px;
+    text-align: center;
+  }
+</style>
+
+<style>
+  .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+  .service-card {
+    background: white; border: 1px solid var(--line-soft);
+    border-radius: 20px; padding: 36px 30px;
+    position: relative; overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: var(--shadow-sm);
+  }
+  .service-card::before {
+    content: ''; position: absolute;
+    top: 0; right: 0; left: 0; height: 3px;
+    background: var(--grad-warm);
+    transform: scaleX(0); transform-origin: right;
+    transition: transform 0.5s;
+  }
+  .service-card:hover { transform: translateY(-6px); border-color: var(--gold); box-shadow: var(--shadow-lg); }
+  .service-card:hover::before { transform: scaleX(1); }
+  .service-tag { font-family: var(--font-mono); font-size: 0.72rem; color: var(--ink-muted); margin-bottom: 22px; letter-spacing: 0.05em; }
+  .service-icon-wrap {
+    width: 60px; height: 60px; border-radius: 16px;
+    background: var(--gold-soft);
+    display: grid; place-items: center;
+    margin-bottom: 22px; color: var(--gold-dark);
+    transition: transform 0.4s;
+    border: 1px solid rgba(200, 149, 72, 0.2);
+  }
+  .service-card:hover .service-icon-wrap { transform: rotate(-5deg) scale(1.08); }
+  .service-icon-wrap svg { width: 26px; height: 26px; }
+  .service-card.cyan .service-icon-wrap { background: var(--mint-soft); color: var(--mint); border-color: rgba(20, 184, 166, 0.2); }
+  .service-card.violet .service-icon-wrap { background: var(--violet-soft); color: var(--violet); border-color: rgba(124, 58, 237, 0.2); }
+  h3.service-title { font-family: var(--font-display); font-size: 1.35rem; font-weight: 700; margin-bottom: 14px; color: var(--ink); letter-spacing: -0.01em; }
+  .service-desc { color: var(--ink-soft); font-size: 0.98rem; line-height: 1.75; margin-bottom: 22px; }
+  .service-list { list-style: none; margin: 0; padding: 0; }
+  .service-list li {
+    padding: 11px 0; font-size: 0.93rem; color: var(--ink);
+    display: flex; align-items: flex-start; gap: 12px;
+    border-top: 1px dashed var(--line-soft);
+  }
+  .service-list li:first-child { border-top: none; padding-top: 0; }
+  .service-list li svg { flex-shrink: 0; margin-top: 4px; color: var(--gold-dark); width: 14px; height: 14px; }
+  .service-card.cyan .service-list li svg { color: var(--mint); }
+  .service-card.violet .service-list li svg { color: var(--violet); }
+
+  /* Tools showcase */
+  .tools-showcase { background: var(--bg-section); }
+  .tools-grid-big { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+  .tool-card {
+    background: white; border: 1px solid var(--line-soft);
+    border-radius: 16px; padding: 28px 20px; text-align: center;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative; overflow: hidden;
+    box-shadow: var(--shadow-sm);
+  }
+  .tool-card:hover { transform: translateY(-5px); border-color: var(--gold); box-shadow: var(--shadow-md); }
+  .tool-card .tool-icon-big {
+    width: 56px; height: 56px; margin: 0 auto 14px;
+    background: var(--bg-soft); border-radius: 14px;
+    display: grid; place-items: center;
+    transition: transform 0.4s;
+  }
+  .tool-card:hover .tool-icon-big { transform: scale(1.1); }
+  .tool-card .tool-icon-big svg { width: 32px; height: 32px; }
+  .tool-card h4 { font-family: var(--font-display); font-size: 1rem; font-weight: 700; margin-bottom: 4px; color: var(--ink); }
+  .tool-card p { color: var(--ink-muted); font-size: 0.82rem; line-height: 1.5; }
+  .tool-card .badge {
+    position: absolute; top: 10px; left: 10px;
+    background: var(--grad-warm); color: white;
+    padding: 2px 9px; border-radius: 999px;
+    font-size: 0.62rem; font-weight: 700;
+    font-family: var(--font-mono);
+  }
+
+  /* Process */
+  .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; position: relative; }
+  .process-grid::before {
+    content: ''; position: absolute; top: 35px; right: 5%; left: 5%;
+    height: 2px;
+    background: linear-gradient(to left, var(--line), var(--gold), var(--violet), var(--line));
+    opacity: 0.4; z-index: 0;
+  }
+  .process-step { position: relative; z-index: 1; text-align: center; }
+  .step-num {
+    width: 70px; height: 70px; margin: 0 auto 20px;
+    background: white; border: 2px solid var(--gold);
+    border-radius: 50%; display: grid; place-items: center;
+    font-family: var(--font-display);
+    font-size: 1.4rem; font-weight: 700;
+    color: var(--gold-dark);
+    box-shadow: 0 0 0 6px var(--bg), var(--shadow-md);
+    transition: transform 0.4s;
+  }
+  .process-step:hover .step-num { transform: scale(1.1) rotate(-5deg); background: var(--grad-warm); color: white; border-color: transparent; }
+  .step-title { font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; margin-bottom: 8px; color: var(--ink); }
+  .step-desc { color: var(--ink-soft); font-size: 0.9rem; line-height: 1.65; max-width: 220px; margin: 0 auto; }
+
+  /* Sectors */
+  .sectors-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .sector-pill {
+    padding: 20px 22px; background: white;
+    border: 1px solid var(--line-soft);
+    border-radius: 14px;
+    display: flex; align-items: center; gap: 14px;
+    transition: all 0.3s;
+    box-shadow: var(--shadow-sm);
+  }
+  .sector-pill:hover { border-color: var(--gold); transform: translateX(-6px); box-shadow: var(--shadow-md); }
+  .sector-icon {
+    width: 42px; height: 42px; border-radius: 11px;
+    background: var(--gold-soft);
+    color: var(--gold-dark);
+    display: grid; place-items: center;
+    flex-shrink: 0;
+  }
+  .sector-icon svg { width: 19px; height: 19px; }
+  .sector-name { font-weight: 600; font-size: 0.98rem; margin-bottom: 2px; color: var(--ink); }
+  .sector-sub { font-size: 0.8rem; color: var(--ink-muted); }
+
+  .cta-box {
+    background: var(--ink); border-radius: 28px;
+    padding: 60px 50px; text-align: center;
+    color: white; position: relative; overflow: hidden;
+  }
+  .cta-box::before {
+    content: ''; position: absolute; top: -50%; right: -10%;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(200, 149, 72, 0.2), transparent 70%);
+    filter: blur(40px);
+  }
+  .cta-title { font-family: var(--font-display); font-size: clamp(1.7rem, 2.8vw, 2.2rem); font-weight: 700; margin-bottom: 14px; position: relative; z-index: 1; color: white; }
+  .cta-desc { color: rgba(255,255,255,0.75); font-size: 1.05rem; margin-bottom: 30px; max-width: 580px; margin-right: auto; margin-left: auto; position: relative; z-index: 1; }
+  .cta-actions { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; position: relative; z-index: 1; }
+
+  @media (max-width: 1024px) {
+    .services-grid { grid-template-columns: 1fr; }
+    .process-grid { grid-template-columns: 1fr 1fr; }
+    .process-grid::before { display: none; }
+    .sectors-grid, .tools-grid-big { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 720px) {
+    .process-grid, .sectors-grid, .tools-grid-big { grid-template-columns: 1fr; }
+    .cta-box { padding: 50px 28px; }
+  }
+  nav .nav-links.nav-open {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 75%;
+    max-width: 300px;
+    height: 100vh;
+    background: var(--bg, #ffffff);
+    box-shadow: -4px 0 24px rgba(0,0,0,0.12);
+    padding: 80px 28px 40px;
+    gap: 8px;
+    z-index: 9999;
+    overflow-y: auto;
+  }
+  nav .nav-links.nav-open a {
+    font-size: 1.1rem;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.07);
+    display: block;
+  }
+  nav .nav-links.nav-open .nav-cta {
+    display: block !important;
+    margin-top: 16px;
+    text-align: center;
+  }
+</style>
+<style id="insiyab-global-polish">.it-nav-lang{font-family:Poppins,system-ui,sans-serif!important;font-size:.72rem!important;letter-spacing:.03em!important;border:1px solid rgba(15,23,41,.12);border-radius:10px;padding:8px 11px!important}.it-nav-lang:hover{border-color:#ff5a47!important}.brand img{filter:none!important;mix-blend-mode:normal!important;opacity:1!important}.nav-inner{gap:14px}.nav-links{gap:14px!important}.nav-links a{white-space:nowrap}@media(max-width:1180px){.nav-links{gap:10px!important}.nav-links a{font-size:.82rem!important}.it-nav-lang{padding:7px 9px!important}}@media(max-width:980px){.it-nav-lang{border:0;padding:12px 0!important}}</style>
+<meta name="description" content="خدمات الذكاء الاصطناعي والأتمتة وتكامل الأنظمة وتحليل البيانات، مصممة حسب احتياج الشركات والجهات في السعودية.">
+<link rel="canonical" href="https://insiyabtech.com.sa/services.html">
+<meta property="og:locale" content="ar_SA">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="InsiyabTech">
+<meta property="og:title" content="الخدمات | انسياب تيك">
+<meta property="og:description" content="خدمات الذكاء الاصطناعي والأتمتة وتكامل الأنظمة وتحليل البيانات، مصممة حسب احتياج الشركات والجهات في السعودية.">
+<meta property="og:url" content="https://insiyabtech.com.sa/services.html">
+<meta property="og:image" content="https://insiyabtech.com.sa/assets/insiyab-mark-v4.svg?v=5?v=5">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="الخدمات | انسياب تيك">
+<meta name="twitter:description" content="خدمات الذكاء الاصطناعي والأتمتة وتكامل الأنظمة وتحليل البيانات، مصممة حسب احتياج الشركات والجهات في السعودية.">
+<meta name="twitter:image" content="https://insiyabtech.com.sa/assets/insiyab-mark-v4.svg?v=5?v=5">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"InsiyabTech","alternateName":"انسياب تيك","url":"https://insiyabtech.com.sa","logo":"https://insiyabtech.com.sa/assets/insiyab-mark-v4.svg?v=5?v=5","email":"info@insiyabtech.com.sa","sameAs":["https://x.com/insiyabtech","https://www.instagram.com/insiyabtech/","https://www.tiktok.com/@insiyabtech"]}</script>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <img src="assets/insiyab-mark-v4.svg?v=5" alt="InsiyabTech" style="height:46px;width:auto;display:block;flex-shrink:0;"><span style="display:flex;flex-direction:column;gap:1px;line-height:1.15;"><span style="font-family:'Poppins',sans-serif;font-size:1.05rem;font-weight:700;color:#0f1729;letter-spacing:-0.01em;">Insiyab<span style="background:linear-gradient(90deg,#f97316,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Tech</span></span><span style="font-family:'IBM Plex Sans Arabic',sans-serif;font-size:1.05rem;font-weight:700;color:#0f1729;">انسياب <span style="background:linear-gradient(90deg,#f97316,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">تيك</span></span></span>
+    </a>
+    <ul class="nav-links">
+<li><a href="index.html">الرئيسية</a></li><li><a href="about.html">من نحن</a></li><li><a href="services.html">الخدمات</a></li><li><a href="solutions.html">الحلول</a></li><li><a href="index.html#work">نماذج الأعمال</a></li><li><a href="blog.html">المعرفة</a></li><li><a href="contact.html">تواصل معنا</a></li><li><a href="index.html" class="it-nav-lang" onclick="try{localStorage.setItem('insiyab-lang','en')}catch(e){}">ENGLISH</a></li>
+</ul>
+    <button class="menu-toggle"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">الرئيسية / الخدمات</div>
+    <h1>حلول <span class="accent">أتمتة ووكلاء ذكيين</span> مبنيّة على واقع السوق السعودي.</h1>
+    <p class="subtitle">لا نبيع أدوات — نبيع نتائج. كلّ خدمة تبدأ بفهم عمليّاتك على الأرض، ثم نُصمّم الحل الذي يُلغي الهدر ويرفع الكفاءة.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-tag">/ الخدمة الأولى</div>
+        <div class="service-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg></div>
+        <h3 class="service-title">بناء وكيل ذكاء اصطناعي مخصّص</h3>
+        <p class="service-desc">وكيل مُدرَّب على بيانات عملك، يردّ على العملاء بلهجتك، يأخذ القرارات حسب قواعدك، ويتصرّف عبر القنوات التي تختارها.</p>
+        <ul class="service-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>ربط مباشر بواتساب الأعمال أو موقعك</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>فهم اللهجات الخليجيّة والعربية الفصحى</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>تصعيد ذكي للموظف البشري عند الحاجة</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>تعلّم وتحسين مستمرّ من التفاعلات</li>
+        </ul>
+      </div>
+
+      <div class="service-card cyan reveal">
+        <div class="service-tag">/ الخدمة الثانية</div>
+        <div class="service-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v6m0 8v6M2 12h6m8 0h6"/><circle cx="12" cy="12" r="4"/></svg></div>
+        <h3 class="service-title">أتمتة سير العمل الداخلي</h3>
+        <p class="service-desc">نُحوّل العمليّات المتكرّرة بين أنظمتك المتفرّقة إلى سير عمل آلي يعمل بلا تدخّل بشري.</p>
+        <ul class="service-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>أتمتة الردود والمتابعات والتذكيرات</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>تنظيم استلام الطلبات وتصنيفها تلقائيًا</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>سير عمل متعدّد المراحل بقواعد ذكيّة</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>توثيق كامل لكل خطوة قابل للمراجعة</li>
+        </ul>
+      </div>
+
+      <div class="service-card violet reveal">
+        <div class="service-tag">/ الخدمة الثالثة</div>
+        <div class="service-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="9" x2="9" y2="15"/><line x1="15" y1="9" x2="15" y2="15"/><line x1="12" y1="6" x2="12" y2="18"/></svg></div>
+        <h3 class="service-title">لوحات بيانات وتقارير تفاعليّة</h3>
+        <p class="service-desc">رؤية لحظيّة لأداء فريقك ومبيعاتك ومخزونك عبر لوحات Power BI و Excel متقدّمة.</p>
+        <ul class="service-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>تقارير مبيعات يوميّة تُولَّد تلقائيًا</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>تحليل أداء المندوبين وتتبّع الزيارات</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>مؤشّرات KPI ديناميكيّة لكل قسم</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>تنبيهات تلقائيّة عند الانحراف</li>
+        </ul>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-tag">/ الخدمة الرابعة</div>
+        <div class="service-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg></div>
+        <h3 class="service-title">دمج الأنظمة وتكامل واجهات API</h3>
+        <p class="service-desc">نربط أنظمتك القائمة مع الأدوات الحديثة بدون استبدالها — تكامل خفيف يحافظ على استثماراتك السابقة.</p>
+        <ul class="service-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>ربط مع أنظمة المحاسبة السعوديّة</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>مزامنة بين Google Drive و Excel</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>تكامل مع منصّات التجارة الإلكترونيّة</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>APIs مخصّصة حسب احتياج عملك</li>
+        </ul>
+      </div>
+
+      <div class="service-card cyan reveal">
+        <div class="service-tag">/ الخدمة الخامسة</div>
+        <div class="service-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+        <h3 class="service-title">أتمتة التقارير الدوريّة</h3>
+        <p class="service-desc">تقارير يوميّة وأسبوعيّة تُرسَل تلقائيًا لمديري الأقسام بدون تدخّل بشري.</p>
+        <ul class="service-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>توليد PDF بالبيانات الحيّة من أنظمتك</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>إرسال آلي للبريد أو واتساب أو تيليغرام</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>جداول مخصّصة لكل دور وظيفي</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>ملخّصات ذكيّة بصياغة عربية واضحة</li>
+        </ul>
+      </div>
+
+      <div class="service-card violet reveal">
+        <div class="service-tag">/ الخدمة السادسة</div>
+        <div class="service-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg></div>
+        <h3 class="service-title">استشارات تحوّل رقمي</h3>
+        <p class="service-desc">قبل التنفيذ، نُشخّص: أين الهدر؟ ما العمليّات التي تستحقّ الأتمتة فعلًا؟ خطّة واضحة قبل أيّ استثمار.</p>
+        <ul class="service-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>تشخيص ميداني للعمليّات الحاليّة</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>خارطة طريق رقميّة بأولويّات واضحة</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>حساب العائد المتوقّع لكل تحسين</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>اختيار الأدوات الأنسب لميزانيّتك</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOOLS SHOWCASE -->
+<section class="tools-showcase">
+  <div class="container">
+    <div class="section-head center reveal">
+      <div class="section-eyebrow">منصّاتنا التقنيّة</div>
+      <h2 class="section-title">نبني بأقوى <span class="gradient">أدوات الأتمتة</span> <span class="light">والذكاء الاصطناعي.</span></h2>
+      <p class="section-desc">نختار الأداة الأنسب لكلّ مشروع. خبرتنا التطبيقيّة تمتدّ عبر هذه الأدوات الرائدة:</p>
+    </div>
+
+    <div class="tools-grid-big">
+      <div class="tool-card reveal">
+        <span class="badge">رئيسيّة</span>
+        <div class="tool-icon-big" style="background: rgba(234, 75, 113, 0.1);">
+          <svg viewBox="0 0 32 32" fill="none">
+            <circle cx="8" cy="16" r="5" fill="#EA4B71"/>
+            <circle cx="22" cy="8" r="4" fill="#EA4B71" opacity="0.8"/>
+            <circle cx="22" cy="24" r="4" fill="#EA4B71" opacity="0.8"/>
+            <line x1="12" y1="14" x2="19" y2="9" stroke="#EA4B71" stroke-width="1.8"/>
+            <line x1="12" y1="18" x2="19" y2="23" stroke="#EA4B71" stroke-width="1.8"/>
+          </svg>
+        </div>
+        <h4>n8n</h4>
+        <p>منصّة الأتمتة — معتمدون رسميًا</p>
+      </div>
+      <div class="tool-card reveal">
+        <div class="tool-icon-big" style="background: rgba(109, 0, 204, 0.1);">
+          <svg viewBox="0 0 32 32" fill="none"><circle cx="11" cy="16" r="7" fill="#6D00CC"/><circle cx="21" cy="16" r="7" fill="#A050FF" opacity="0.9"/></svg>
+        </div>
+        <h4>Make</h4>
+        <p>أتمتة مرئيّة سهلة</p>
+      </div>
+      <div class="tool-card reveal">
+        <div class="tool-icon-big" style="background: rgba(217, 119, 87, 0.1);">
+          <svg viewBox="0 0 32 32" fill="none"><path d="M16 4 L20 12 L28 16 L20 20 L16 28 L12 20 L4 16 L12 12 Z" fill="#D97757"/></svg>
+        </div>
+        <h4>Claude</h4>
+        <p>نموذج لغوي للوكلاء الذكيّة</p>
+      </div>
+      <div class="tool-card reveal">
+        <div class="tool-icon-big" style="background: rgba(16, 163, 127, 0.08);">
+          <svg viewBox="0 0 32 32" fill="none" stroke="#10A37F" stroke-width="2.2">
+            <circle cx="16" cy="16" r="11"/>
+            <path d="M16 5 L16 27 M5 11 L27 21 M27 11 L5 21" opacity="0.7"/>
+          </svg>
+        </div>
+        <h4>OpenAI</h4>
+        <p>GPT لتوليد المحتوى</p>
+      </div>
+      <div class="tool-card reveal">
+        <div class="tool-icon-big" style="background: rgba(242, 200, 17, 0.12);">
+          <svg viewBox="0 0 32 32" fill="none">
+            <rect x="6" y="18" width="5" height="10" fill="#F2C811"/>
+            <rect x="14" y="12" width="5" height="16" fill="#F2C811" opacity="0.85"/>
+            <rect x="22" y="6" width="5" height="22" fill="#F2C811" opacity="0.7"/>
+          </svg>
+        </div>
+        <h4>Power BI</h4>
+        <p>لوحات بيانات وتحليلات</p>
+      </div>
+      <div class="tool-card reveal">
+        <div class="tool-icon-big" style="background: rgba(255, 74, 0, 0.1);">
+          <svg viewBox="0 0 32 32" fill="#FF4A00"><path d="M16 6 L18 14 L26 16 L18 18 L16 26 L14 18 L6 16 L14 14 Z"/></svg>
+        </div>
+        <h4>Zapier</h4>
+        <p>تكاملات SaaS</p>
+      </div>
+      <div class="tool-card reveal">
+        <div class="tool-icon-big" style="background: rgba(37, 211, 102, 0.1);">
+          <svg viewBox="0 0 32 32" fill="#25D366"><path d="M27 5C24 2 20 .5 16 .5 7.5.5.5 7.4.5 16c0 2.7.7 5.4 2 7.7L.4 31.5l8-2.1c2.2 1.2 4.7 1.9 7.2 1.9 8.5 0 15.5-6.9 15.5-15.5 0-4-1.6-7.9-4.1-10.8zM16 28.7c-2.3 0-4.5-.6-6.4-1.7l-.5-.3-4.7 1.2 1.3-4.6-.3-.5C4.1 21 3.4 18.5 3.4 16 3.4 9 9 3.4 16 3.4c3.4 0 6.6 1.3 8.9 3.7s3.7 5.6 3.7 8.9c0 7-5.6 12.6-12.6 12.6z"/></svg>
+        </div>
+        <h4>WhatsApp API</h4>
+        <p>قناة التواصل الأهم</p>
+      </div>
+      <div class="tool-card reveal">
+        <div class="tool-icon-big" style="background: rgba(66, 133, 244, 0.08);">
+          <svg viewBox="0 0 32 32" fill="none">
+            <path d="M28 16.3c0-.8-.1-1.6-.2-2.3H16v4.5h6.7c-.3 1.6-1.2 2.9-2.5 3.8v3.2h4.1c2.4-2.2 3.7-5.5 3.7-9.2z" fill="#4285F4"/>
+            <path d="M16 28c3.4 0 6.2-1.1 8.3-3l-4.1-3.2c-1.1.8-2.6 1.2-4.2 1.2-3.2 0-6-2.2-7-5.1H4.8v3.3C7 25.4 11.2 28 16 28z" fill="#34A853"/>
+            <path d="M9 17.9c-.2-.8-.4-1.6-.4-2.4s.1-1.6.4-2.4V9.8H4.8C4 11.4 3.5 13.2 3.5 15.5c0 2.3.5 4.1 1.3 5.7L9 17.9z" fill="#FBBC04"/>
+            <path d="M16 8c1.8 0 3.5.6 4.8 1.9l3.6-3.6C22.2 4.4 19.4 3 16 3 11.2 3 7 5.6 4.8 9.8L9 13c1-2.9 3.8-5 7-5z" fill="#EA4335"/>
+          </svg>
+        </div>
+        <h4>Google</h4>
+        <p>Sheets، Drive، Calendar</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head center reveal">
+      <div class="section-eyebrow">منهجيّة العمل</div>
+      <h2 class="section-title">من الفوضى <span class="light">إلى الانسياب — في أربع خطوات.</span></h2>
+    </div>
+
+    <div class="process-grid">
+      <div class="process-step reveal">
+        <div class="step-num">1</div>
+        <h3 class="step-title">التشخيص</h3>
+        <p class="step-desc">جلسة مجانيّة لفهم عمليّاتك ونقاط الألم وفرص الأتمتة.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="step-num">2</div>
+        <h3 class="step-title">التصميم</h3>
+        <p class="step-desc">خارطة سير عمل مُفصّلة باختيار الأدوات المناسبة.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="step-num">3</div>
+        <h3 class="step-title">التنفيذ</h3>
+        <p class="step-desc">نبني السير الآلي ونختبره معك على بياناتك الحقيقيّة.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="step-num">4</div>
+        <h3 class="step-title">الدعم</h3>
+        <p class="step-desc">ندعمك بعد الإطلاق، نُحسّن، ونُضيف ميزات مع نموّك.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background: var(--bg-section);">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-eyebrow">القطاعات التي نخدمها</div>
+      <h2 class="section-title">نفهم لغة قطاعك <span class="light">قبل أن نكتب أوّل سطر.</span></h2>
+    </div>
+
+    <div class="sectors-grid">
+      <div class="sector-pill reveal">
+        <div class="sector-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0016.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 002 8.5c0 2.29 1.51 4.04 3 5.5l7 7z"/></svg></div>
+        <div><div class="sector-name">العيادات الطبيّة</div><div class="sector-sub">حجوزات وتذكيرات وملفّات مرضى</div></div>
+      </div>
+      <div class="sector-pill reveal">
+        <div class="sector-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="8.5" cy="7" r="4"/></svg></div>
+        <div><div class="sector-name">شركات التوزيع</div><div class="sector-sub">إدارة المندوبين والفواتير</div></div>
+      </div>
+      <div class="sector-pill reveal">
+        <div class="sector-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg></div>
+        <div><div class="sector-name">المتاجر الإلكترونيّة</div><div class="sector-sub">معالجة طلبات وخدمة عملاء</div></div>
+      </div>
+      <div class="sector-pill reveal">
+        <div class="sector-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div>
+        <div><div class="sector-name">المكاتب العقاريّة</div><div class="sector-sub">إدارة العملاء والوحدات</div></div>
+      </div>
+      <div class="sector-pill reveal">
+        <div class="sector-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+        <div><div class="sector-name">مكاتب المحاسبة</div><div class="sector-sub">جمع بيانات وتقارير ضريبيّة</div></div>
+      </div>
+      <div class="sector-pill reveal">
+        <div class="sector-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg></div>
+        <div><div class="sector-name">المطاعم والمقاهي</div><div class="sector-sub">طلبات وولاء وتقارير</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding: 40px 0 100px;">
+  <div class="container">
+    <div class="cta-box reveal">
+      <h2 class="cta-title">عملك يستحقّ أن يَنساب.</h2>
+      <p class="cta-desc">احجز جلسة تشخيص مجّانيّة. سنرى معًا أين يُهدَر وقتك، وكيف يمكن للأتمتة أن تُحرّر فريقك.</p>
+      <div class="cta-actions">
+        <a href="https://wa.me/966532544447" target="_blank" class="btn btn-gold">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          تواصل عبر واتساب
+        </a>
+        <a href="contact.html" class="btn btn-ghost" style="background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); color: white;">طلب عرض سعر</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<a href="https://wa.me/966532544447" class="wa-float" target="_blank">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand-block">
+        <a href="index.html" class="brand">
+      <img src="assets/insiyab-mark-v4.svg?v=5" alt="InsiyabTech" style="height:46px;width:auto;display:block;flex-shrink:0;"><span style="display:flex;flex-direction:column;gap:1px;line-height:1.15;"><span style="font-family:'Poppins',sans-serif;font-size:1.05rem;font-weight:700;color:#ffffff;letter-spacing:-0.01em;">Insiyab<span style="background:linear-gradient(90deg,#f97316,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Tech</span></span><span style="font-family:'IBM Plex Sans Arabic',sans-serif;font-size:1.05rem;font-weight:700;color:#ffffff;">انسياب <span style="background:linear-gradient(90deg,#f97316,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">تيك</span></span></span>
+    </a>
+        <p>نبني وكلاء ذكاء اصطناعي وأنظمة أتمتة تُحرّر فريقك من المهامّ التكراريّة.</p>
+      </div>
+      <div class="footer-col"><h4>الموقع</h4><ul><li><a href="index.html">الرئيسية</a></li><li><a href="services.html">الخدمات</a></li><li><a href="guide.html">الدليل</a></li><li><a href="blog.html">المدوّنة</a></li></ul></div>
+      <div class="footer-col"><h4>الشركة</h4><ul><li><a href="about.html">من نحن</a></li><li><a href="contact.html">اتصل بنا</a></li><li><a href="privacy.html">سياسة الخصوصية</a></li><li><a href="terms.html">الشروط والأحكام</a></li></ul></div>
+      <div class="footer-col"><h4>تواصل مباشر</h4><ul><li><a href="https://wa.me/966532544447" target="_blank">واتساب: 0532544447</a></li><li><a href="mailto:info@insiyabtech.com.sa">info@insiyabtech.com.sa</a></li><li><a href="services.html#">القصيم — المملكة العربيّة السعوديّة</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 انسياب تيك. جميع الحقوق محفوظة.</div>
+      <div class="socials">
+        <a href="https://x.com/insiyabtech" target="_blank" rel="noopener" aria-label="تويتر X">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/insiyabtech/" target="_blank" rel="noopener" aria-label="انستقرام">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="https://www.snapchat.com/add/insiyabtech" target="_blank" rel="noopener" aria-label="سناب شات">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.017 0C8.396 0 5.83 1.973 5.83 5.602v.668c0 .352-.028.7-.085 1.04-.223.131-.46.197-.71.197-.43 0-.84-.163-1.15-.43a.47.47 0 00-.31-.11c-.26 0-.5.2-.5.47 0 .03.004.06.01.09.12.57.63 1.01 1.25 1.18.067.02.134.035.2.047-.06.22-.13.42-.21.6-.46 1.03-1.38 1.73-2.31 1.73-.15 0-.3-.01-.44-.04a.47.47 0 00-.1-.01c-.26 0-.47.21-.47.47 0 .22.15.41.37.46.96.22 1.63.83 1.97 1.79.02.05.05.08.09.08.04 0 .37-.04.82-.04.59 0 1.42.08 2.23.52.7.38 1.27.97 2.46.97 1.17 0 1.76-.59 2.44-.97.81-.44 1.64-.52 2.23-.52.45 0 .78.04.82.04.04 0 .07-.03.09-.08.34-.96 1.01-1.57 1.97-1.79.22-.05.37-.24.37-.46 0-.26-.21-.47-.47-.47-.03 0-.07 0-.1.01-.14.03-.29.04-.44.04-.93 0-1.85-.7-2.31-1.73-.08-.18-.15-.38-.21-.6.066-.012.133-.027.2-.047.62-.17 1.13-.61 1.25-1.18.006-.03.01-.06.01-.09 0-.27-.24-.47-.5-.47-.11 0-.22.04-.31.11-.31.267-.72.43-1.15.43-.25 0-.487-.066-.71-.197a6.16 6.16 0 01-.085-1.04v-.668C18.17 1.973 15.638 0 12.017 0z"/></svg>
+        </a>
+        <a href="https://www.tiktok.com/@insiyabtech" target="_blank" rel="noopener" aria-label="تيك توك">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.76a4.85 4.85 0 01-1.01-.07z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+    // Mobile menu toggle
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navLinks = document.querySelector(".nav-links");
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("nav-open");
+    });
+  }
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal, .reveal-scale').forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>

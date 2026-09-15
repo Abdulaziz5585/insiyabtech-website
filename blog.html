@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6P2CM4PPHQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-6P2CM4PPHQ');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>المعرفة والمدونة | انسياب تيك</title>
+  <link rel="icon" type="image/svg+xml" href="assets/insiyab-mark-v4.svg?v=5">
+  
+  
+  
+  
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* انسياب تيك - Light Premium Theme */
+
+:root {
+  /* Backgrounds */
+  --bg: #ffffff;
+  --bg-soft: #faf8f3;
+  --bg-section: #fbfaf6;
+  --bg-card: #ffffff;
+  --bg-dark: #0f1729;
+
+  /* Lines */
+  --line: #ece6d8;
+  --line-soft: rgba(15, 23, 41, 0.06);
+  --line-strong: #d9d2c0;
+
+  /* Ink (text) */
+  --ink: #0f1729;
+  --ink-soft: #4a5570;
+  --ink-muted: #7a8499;
+  --ink-faint: #adb4c4;
+  --ink-inverse: #fefcf7;
+
+  /* Brand colors */
+  --gold: #c89548;
+  --gold-bright: #e8b048;
+  --gold-dark: #a87a30;
+  --gold-soft: #f5ead0;
+  --coral: #f43f5e;
+  --coral-soft: #fde2e7;
+  --violet: #7c3aed;
+  --violet-soft: #ede4fc;
+  --mint: #14b8a6;
+  --mint-soft: #d4f4ef;
+  --navy: #0f1729;
+
+  /* Gradients */
+  --grad-warm: linear-gradient(135deg, #c89548 0%, #f43f5e 100%);
+  --grad-cool: linear-gradient(135deg, #14b8a6 0%, #7c3aed 100%);
+  --grad-primary: linear-gradient(135deg, #c89548 0%, #f43f5e 50%, #7c3aed 100%);
+  --grad-soft: linear-gradient(135deg, rgba(200, 149, 72, 0.08), rgba(124, 58, 237, 0.06));
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(15, 23, 41, 0.05), 0 1px 2px rgba(15, 23, 41, 0.04);
+  --shadow-md: 0 8px 24px -8px rgba(15, 23, 41, 0.12), 0 2px 6px rgba(15, 23, 41, 0.04);
+  --shadow-lg: 0 24px 50px -16px rgba(15, 23, 41, 0.15), 0 6px 14px rgba(15, 23, 41, 0.06);
+  --shadow-xl: 0 32px 80px -20px rgba(15, 23, 41, 0.2), 0 10px 20px rgba(15, 23, 41, 0.08);
+  --shadow-gold: 0 12px 32px -8px rgba(200, 149, 72, 0.4);
+
+  /* Fonts */
+  --font-display: 'IBM Plex Sans Arabic', sans-serif;
+  --font-body: 'IBM Plex Sans Arabic', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --max-width: 1280px;
+  --radius: 18px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.65;
+  overflow-x: hidden;
+  min-height: 100vh;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Subtle ambient gradient */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 50% at 80% 0%, rgba(200, 149, 72, 0.06), transparent 70%),
+    radial-gradient(ellipse 50% 40% at 0% 80%, rgba(124, 58, 237, 0.04), transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* Navigation */
+nav {
+  position: fixed; top: 0; right: 0; left: 0; z-index: 100;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  background: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid var(--line-soft);
+}
+.nav-inner {
+  max-width: var(--max-width); margin: 0 auto; padding: 14px 32px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--ink); }
+.brand-mark { width: 42px; height: 42px; }
+.brand-mark svg { width: 100%; height: 100%; }
+.brand-name {
+  font-family: var(--font-display);
+  font-size: 1.25rem; font-weight: 700;
+  letter-spacing: -0.01em; line-height: 1;
+}
+.brand-name span {
+  background: var(--grad-warm);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
+.nav-links { display: flex; gap: 32px; align-items: center; list-style: none; }
+.nav-links a {
+  color: var(--ink-soft); text-decoration: none;
+  font-size: 0.94rem; font-weight: 500;
+  transition: color 0.2s; position: relative;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--ink); }
+.nav-links a.active::after {
+  content: ''; position: absolute; bottom: -7px;
+  right: 0; left: 0; height: 2px;
+  background: var(--grad-warm); border-radius: 2px;
+}
+.nav-cta {
+  background: var(--navy);
+  color: white !important;
+  padding: 10px 22px; border-radius: 999px;
+  font-weight: 600; font-size: 0.9rem;
+  transition: all 0.25s;
+  box-shadow: var(--shadow-md);
+}
+.nav-cta:hover {
+  background: var(--grad-warm);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-gold);
+}
+.nav-cta::after { display: none !important; }
+.menu-toggle { display: none; background: none; border: none; color: var(--ink); cursor: pointer; }
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 16px 28px; border-radius: 12px;
+  font-weight: 600; font-size: 1rem;
+  text-decoration: none; transition: all 0.25s;
+  cursor: pointer; border: none; font-family: inherit;
+  position: relative; overflow: hidden;
+}
+.btn-primary {
+  background: var(--navy);
+  color: white;
+  box-shadow: var(--shadow-md);
+}
+.btn-primary::before {
+  content: ''; position: absolute; inset: 0;
+  background: var(--grad-warm);
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 0;
+}
+.btn-primary > * { position: relative; z-index: 1; }
+.btn-primary:hover::before { opacity: 1; }
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-gold);
+}
+.btn-gold {
+  background: var(--grad-warm);
+  color: white;
+  box-shadow: var(--shadow-gold);
+}
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px -10px rgba(200, 149, 72, 0.5);
+}
+.btn-ghost {
+  background: white;
+  color: var(--ink);
+  border: 1px solid var(--line-strong);
+}
+.btn-ghost:hover {
+  border-color: var(--gold);
+  background: var(--gold-soft);
+  transform: translateY(-2px);
+}
+.btn svg { transition: transform 0.2s; }
+.btn:hover svg { transform: translateX(-3px); }
+
+/* Sections */
+section { padding: 100px 0; position: relative; }
+
+.section-head { margin-bottom: 60px; max-width: 760px; }
+.section-head.center { text-align: center; margin-right: auto; margin-left: auto; }
+.section-eyebrow {
+  font-family: var(--font-mono); font-size: 0.78rem;
+  color: var(--gold-dark);
+  text-transform: uppercase; letter-spacing: 0.12em;
+  margin-bottom: 18px;
+  display: flex; align-items: center; gap: 12px;
+  font-weight: 600;
+}
+.section-head.center .section-eyebrow { justify-content: center; }
+.section-eyebrow::before {
+  content: ''; width: 28px; height: 1.5px;
+  background: var(--grad-warm); border-radius: 2px;
+}
+h2.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 700; letter-spacing: -0.02em;
+  line-height: 1.2; margin-bottom: 20px;
+  color: var(--ink);
+}
+h2.section-title .light { color: var(--ink-muted); font-weight: 400; }
+h2.section-title .gradient {
+  background: var(--grad-primary);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.section-desc {
+  font-size: 1.08rem; color: var(--ink-soft); line-height: 1.75;
+}
+
+/* Footer */
+footer {
+  background: var(--bg-dark);
+  color: rgba(255, 255, 255, 0.7);
+  padding: 70px 0 32px;
+  position: relative; z-index: 2;
+}
+.footer-grid {
+  display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 48px; margin-bottom: 48px;
+}
+.footer-brand-block .brand { color: white; }
+.footer-brand-block .brand-name { color: white; }
+.footer-brand-block p {
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 16px; line-height: 1.7;
+  font-size: 0.94rem; max-width: 320px;
+}
+.footer-col h4 {
+  font-family: var(--font-display);
+  font-size: 0.94rem; color: white;
+  margin-bottom: 20px; font-weight: 700;
+}
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 12px; }
+.footer-col a {
+  color: rgba(255, 255, 255, 0.55);
+  text-decoration: none;
+  font-size: 0.91rem; transition: color 0.2s;
+}
+.footer-col a:hover { color: var(--gold-bright); }
+.footer-bottom {
+  padding-top: 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 0.85rem; color: rgba(255, 255, 255, 0.45);
+  flex-wrap: wrap; gap: 16px;
+}
+.socials { display: flex; gap: 14px; align-items: center; }
+.socials a {
+  display: flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px; border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.7);
+  transition: background 0.2s, color 0.2s;
+  text-decoration: none;
+}
+.socials a:hover {
+  background: var(--grad-warm);
+  color: #fff;
+}
+.socials svg { width: 18px; height: 18px; }
+
+/* Reveal animations */
+.reveal {
+  opacity: 0; transform: translateY(28px);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.in { opacity: 1; transform: translateY(0); }
+.reveal-scale {
+  opacity: 0; transform: scale(0.94);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-scale.in { opacity: 1; transform: scale(1); }
+
+/* Page hero (inner pages) */
+.page-hero { padding: 140px 0 60px; position: relative; }
+.page-hero::after {
+  content: ''; position: absolute;
+  bottom: 0; right: 10%; left: 10%;
+  height: 1px;
+  background: linear-gradient(to left, transparent, var(--gold), var(--violet), transparent);
+  opacity: 0.3;
+}
+.page-hero .breadcrumb {
+  font-family: var(--font-mono); font-size: 0.8rem;
+  color: var(--gold-dark);
+  text-transform: uppercase; letter-spacing: 0.1em;
+  margin-bottom: 20px; font-weight: 600;
+}
+.page-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+  font-weight: 700; letter-spacing: -0.025em;
+  line-height: 1.15; margin-bottom: 20px; max-width: 920px;
+  color: var(--ink);
+}
+.page-hero h1 .accent {
+  background: var(--grad-primary);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.page-hero .subtitle {
+  font-size: 1.18rem; color: var(--ink-soft);
+  max-width: 760px; line-height: 1.7;
+}
+
+/* WhatsApp floating */
+.wa-float {
+  position: fixed; bottom: 24px; left: 24px; z-index: 90;
+  width: 58px; height: 58px;
+  background: linear-gradient(135deg, #25d366, #128c7e);
+  border-radius: 50%; display: grid; place-items: center;
+  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+  text-decoration: none; color: white;
+  transition: transform 0.3s;
+  animation: wa-pulse 2.5s ease-in-out infinite;
+}
+.wa-float:hover { transform: scale(1.1) rotate(-5deg); }
+.wa-float svg { width: 28px; height: 28px; }
+@keyframes wa-pulse {
+  0%, 100% { box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4), 0 0 0 0 rgba(37, 211, 102, 0.5); }
+  50% { box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4), 0 0 0 18px rgba(37, 211, 102, 0); }
+}
+
+@media (max-width: 1024px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 720px) {
+  .container { padding: 0 20px; }
+  nav .nav-links { display: none; }
+  nav .menu-toggle { display: block; }
+  .nav-cta { display: none; }
+  section { padding: 70px 0; }
+  .page-hero { padding: 110px 0 40px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .wa-float { bottom: 16px; left: 16px; width: 52px; height: 52px; }
+  .wa-float svg { width: 26px; height: 26px; }
+}
+
+  nav .nav-links.nav-open {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 75%;
+    max-width: 300px;
+    height: 100vh;
+    background: var(--bg, #ffffff);
+    box-shadow: -4px 0 24px rgba(0,0,0,0.12);
+    padding: 80px 28px 40px;
+    gap: 8px;
+    z-index: 9999;
+    overflow-y: auto;
+  }
+  nav .nav-links.nav-open a {
+    font-size: 1.1rem;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.07);
+    display: block;
+  }
+  nav .nav-links.nav-open .nav-cta {
+    display: block !important;
+    margin-top: 16px;
+    text-align: center;
+  }
+
+/* Coming Soon overlay on blog cards */
+.blog-card { position: relative; }
+.blog-card-soon {
+  position: absolute;
+  top: 12px; right: 12px;
+  background: linear-gradient(135deg,#c89548,#f43f5e);
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  z-index: 2;
+}
+.blog-modal-overlay {
+  position: fixed; inset: 0;
+  background: rgba(15,23,41,0.65);
+  z-index: 99999;
+  display: flex; align-items: center; justify-content: center;
+  padding: 20px;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.blog-modal-overlay.open { opacity: 1; pointer-events: all; }
+.blog-modal {
+  background: #fff;
+  border-radius: 22px;
+  padding: 40px 36px;
+  max-width: 460px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 32px 80px rgba(15,23,41,0.25);
+  transform: translateY(20px) scale(0.95);
+  transition: transform 0.3s cubic-bezier(.34,1.4,.64,1);
+  position: relative;
+}
+.blog-modal-overlay.open .blog-modal { transform: translateY(0) scale(1); }
+.blog-modal-icon {
+  width: 64px; height: 64px; border-radius: 50%;
+  background: linear-gradient(135deg,#f5ead0,#fde2e7);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 1.8rem;
+}
+.blog-modal h3 { font-size: 1.25rem; margin-bottom: 10px; color: #0f1729; }
+.blog-modal p { color: #4a5570; font-size: 0.9rem; line-height: 1.7; margin-bottom: 8px; }
+.blog-modal-title { font-weight: 700; color: #c89548; font-size: 0.95rem; margin-bottom: 20px; display: block; }
+.blog-modal-btns { display: flex; flex-direction: column; gap: 10px; margin-top: 20px; }
+.blog-modal-wa {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  background: #25D366; color: #fff;
+  padding: 13px 20px; border-radius: 12px;
+  font-weight: 700; font-size: 0.9rem;
+  text-decoration: none;
+}
+.blog-modal-contact {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  background: linear-gradient(135deg,#c89548,#f43f5e); color: #fff;
+  padding: 13px 20px; border-radius: 12px;
+  font-weight: 700; font-size: 0.9rem;
+  text-decoration: none;
+}
+.blog-modal-close {
+  position: absolute; top: 14px; left: 14px;
+  background: #f5f3ef; border: none;
+  width: 32px; height: 32px; border-radius: 8px;
+  cursor: pointer; font-size: 1rem;
+  display: flex; align-items: center; justify-content: center;
+  color: #7a8499;
+}
+.blog-modal-close:hover { background: #ede8de; }
+
+</style>
+
+<style>
+  .categories-bar { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 40px; padding-bottom: 28px; border-bottom: 1px solid var(--line-soft); }
+  .cat-pill { padding: 9px 18px; background: white; border: 1px solid var(--line); border-radius: 999px; color: var(--ink-soft); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: all 0.25s; cursor: pointer; box-shadow: var(--shadow-sm); }
+  .cat-pill:hover { color: var(--ink); border-color: var(--gold); transform: translateY(-2px); }
+  .cat-pill.active { background: var(--grad-warm); color: white; border-color: transparent; font-weight: 600; box-shadow: var(--shadow-gold); }
+
+  .featured-article { background: white; border: 1px solid var(--line); border-radius: 22px; overflow: hidden; margin-bottom: 40px; display: grid; grid-template-columns: 1.1fr 1fr; text-decoration: none; color: inherit; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); box-shadow: var(--shadow-md); }
+  .featured-article:hover { transform: translateY(-6px); border-color: var(--gold); box-shadow: var(--shadow-lg); }
+  .featured-img { aspect-ratio: 4/3; background: linear-gradient(135deg, var(--bg-soft), white); position: relative; overflow: hidden; }
+  .featured-img svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .featured-content { padding: 48px 40px; display: flex; flex-direction: column; justify-content: center; }
+  .featured-tag { display: inline-block; padding: 5px 14px; background: var(--gold-soft); color: var(--gold-dark); border-radius: 999px; font-family: var(--font-mono); font-size: 0.74rem; margin-bottom: 18px; width: fit-content; font-weight: 600; border: 1px solid rgba(200, 149, 72, 0.2); }
+  .featured-content h2 { font-family: var(--font-display); font-size: clamp(1.4rem, 2.3vw, 1.9rem); font-weight: 700; margin-bottom: 16px; line-height: 1.3; color: var(--ink); letter-spacing: -0.01em; }
+  .featured-content p { color: var(--ink-soft); line-height: 1.7; margin-bottom: 22px; font-size: 1rem; }
+  .featured-meta { display: flex; align-items: center; gap: 14px; font-size: 0.85rem; color: var(--ink-muted); }
+  .featured-meta .read-link { color: var(--gold-dark); margin-right: auto; font-weight: 700; }
+
+  .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .blog-card { background: white; border: 1px solid var(--line-soft); border-radius: 16px; overflow: hidden; text-decoration: none; color: inherit; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); display: flex; flex-direction: column; box-shadow: var(--shadow-sm); }
+  .blog-card:hover { transform: translateY(-6px); border-color: var(--gold); box-shadow: var(--shadow-lg); }
+  .blog-thumb { aspect-ratio: 16/10; position: relative; overflow: hidden; background: var(--bg-soft); }
+  .blog-thumb svg { width: 100%; height: 100%; display: block; }
+  .blog-thumb .cat { position: absolute; top: 12px; right: 12px; background: white; border: 1px solid var(--line); padding: 4px 11px; border-radius: 999px; font-family: var(--font-mono); font-size: 0.68rem; color: var(--gold-dark); font-weight: 600; box-shadow: var(--shadow-sm); }
+  .blog-body { padding: 22px; flex: 1; display: flex; flex-direction: column; }
+  .blog-body h3 { font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; margin-bottom: 10px; line-height: 1.45; color: var(--ink); }
+  .blog-body p { color: var(--ink-soft); font-size: 0.9rem; line-height: 1.65; margin-bottom: 16px; flex: 1; }
+  .blog-meta { display: flex; justify-content: space-between; border-top: 1px solid var(--line-soft); padding-top: 12px; font-size: 0.78rem; color: var(--ink-muted); }
+  .blog-meta .arrow { color: var(--gold-dark); font-weight: 700; }
+
+  @media (max-width: 1024px) { .featured-article { grid-template-columns: 1fr; } .featured-content { padding: 32px 26px; } .blog-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 720px) { .blog-grid { grid-template-columns: 1fr; } }
+  nav .nav-links.nav-open {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 75%;
+    max-width: 300px;
+    height: 100vh;
+    background: var(--bg, #ffffff);
+    box-shadow: -4px 0 24px rgba(0,0,0,0.12);
+    padding: 80px 28px 40px;
+    gap: 8px;
+    z-index: 9999;
+    overflow-y: auto;
+  }
+  nav .nav-links.nav-open a {
+    font-size: 1.1rem;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.07);
+    display: block;
+  }
+  nav .nav-links.nav-open .nav-cta {
+    display: block !important;
+    margin-top: 16px;
+    text-align: center;
+  }
+</style>
+<style id="insiyab-global-polish">.it-nav-lang{font-family:Poppins,system-ui,sans-serif!important;font-size:.72rem!important;letter-spacing:.03em!important;border:1px solid rgba(15,23,41,.12);border-radius:10px;padding:8px 11px!important}.it-nav-lang:hover{border-color:#ff5a47!important}.brand img{filter:none!important;mix-blend-mode:normal!important;opacity:1!important}.nav-inner{gap:14px}.nav-links{gap:14px!important}.nav-links a{white-space:nowrap}@media(max-width:1180px){.nav-links{gap:10px!important}.nav-links a{font-size:.82rem!important}.it-nav-lang{padding:7px 9px!important}}@media(max-width:980px){.it-nav-lang{border:0;padding:12px 0!important}}</style>
+<meta name="description" content="مقالات تطبيقية عن الذكاء الاصطناعي والأتمتة والوكلاء الذكيين وتكامل الأنظمة من واقع التطبيق في السوق السعودي.">
+<link rel="canonical" href="https://insiyabtech.com.sa/blog.html">
+<meta property="og:locale" content="ar_SA">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="InsiyabTech">
+<meta property="og:title" content="المعرفة والمدونة | انسياب تيك">
+<meta property="og:description" content="مقالات تطبيقية عن الذكاء الاصطناعي والأتمتة والوكلاء الذكيين وتكامل الأنظمة من واقع التطبيق في السوق السعودي.">
+<meta property="og:url" content="https://insiyabtech.com.sa/blog.html">
+<meta property="og:image" content="https://insiyabtech.com.sa/assets/insiyab-mark-v4.svg?v=5?v=5">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="المعرفة والمدونة | انسياب تيك">
+<meta name="twitter:description" content="مقالات تطبيقية عن الذكاء الاصطناعي والأتمتة والوكلاء الذكيين وتكامل الأنظمة من واقع التطبيق في السوق السعودي.">
+<meta name="twitter:image" content="https://insiyabtech.com.sa/assets/insiyab-mark-v4.svg?v=5?v=5">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"InsiyabTech","alternateName":"انسياب تيك","url":"https://insiyabtech.com.sa","logo":"https://insiyabtech.com.sa/assets/insiyab-mark-v4.svg?v=5?v=5","email":"info@insiyabtech.com.sa","sameAs":["https://x.com/insiyabtech","https://www.instagram.com/insiyabtech/","https://www.tiktok.com/@insiyabtech"]}</script>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <img src="assets/insiyab-mark-v4.svg?v=5" alt="InsiyabTech" style="height:46px;width:auto;display:block;flex-shrink:0;"><span style="display:flex;flex-direction:column;gap:1px;line-height:1.15;"><span style="font-family:'Poppins',sans-serif;font-size:1.05rem;font-weight:700;color:#0f1729;letter-spacing:-0.01em;">Insiyab<span style="background:linear-gradient(90deg,#f97316,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Tech</span></span><span style="font-family:'IBM Plex Sans Arabic',sans-serif;font-size:1.05rem;font-weight:700;color:#0f1729;">انسياب <span style="background:linear-gradient(90deg,#f97316,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">تيك</span></span></span>
+    </a>
+    <ul class="nav-links">
+<li><a href="index.html">الرئيسية</a></li><li><a href="about.html">من نحن</a></li><li><a href="services.html">الخدمات</a></li><li><a href="solutions.html">الحلول</a></li><li><a href="index.html#work">نماذج الأعمال</a></li><li><a href="blog.html">المعرفة</a></li><li><a href="contact.html">تواصل معنا</a></li><li><a href="index.html" class="it-nav-lang" onclick="try{localStorage.setItem('insiyab-lang','en')}catch(e){}">ENGLISH</a></li>
+</ul>
+    <button class="menu-toggle"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">الرئيسية / المدوّنة</div>
+    <h1>مقالات تطبيقيّة <span class="accent">— لا نظريّات.</span></h1>
+    <p class="subtitle">كلّ مقال يُجيب على سؤال حقيقي يواجه أصحاب الأعمال في السوق السعودي.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="categories-bar">
+      <a href="blog.html#" class="cat-pill active">الكل</a>
+      <a href="blog.html#" class="cat-pill">وكلاء ذكاء اصطناعي</a>
+      <a href="blog.html#" class="cat-pill">أتمتة الأعمال</a>
+      <a href="blog.html#" class="cat-pill">أدوات ومراجعات</a>
+      <a href="blog.html#" class="cat-pill">دليل تعليمي</a>
+      <a href="blog.html#" class="cat-pill">قطاع الصحّة</a>
+    </div>
+
+    <a href="blog-clinic-agent.html" class="featured-article reveal">
+      <div class="featured-img">
+        <svg viewBox="0 0 600 450" preserveAspectRatio="xMidYMid slice">
+          <defs><linearGradient id="fg1" x1="0" x2="1"><stop offset="0" stop-color="#c89548" stop-opacity="0.4"/><stop offset="1" stop-color="#7c3aed" stop-opacity="0.3"/></linearGradient></defs>
+          <rect width="600" height="450" fill="#faf8f3"/>
+          <circle cx="150" cy="180" r="80" fill="url(#fg1)" opacity="0.6"/>
+          <circle cx="430" cy="280" r="110" fill="#f43f5e" opacity="0.15"/>
+          <g stroke="#c89548" stroke-width="2" fill="none" opacity="0.5">
+            <path d="M50,225 Q150,150 250,200 T450,180"/>
+            <path d="M100,300 Q200,250 300,320 T500,280"/>
+          </g>
+          <g><circle cx="50" cy="225" r="5" fill="#c89548"/><circle cx="250" cy="200" r="5" fill="#f43f5e"/><circle cx="450" cy="180" r="5" fill="#7c3aed"/></g>
+        </svg>
+      </div>
+      <div class="featured-content">
+        <span class="featured-tag">المقال المميّز</span>
+        <h2>لماذا يفشل 7 من 10 مشاريع أتمتة في السعوديّة — وكيف تتجنّب الفخّ؟</h2>
+        <p>تجارب ميدانيّة من القصيم والرياض تكشف الأخطاء الستّة التي تجعل مشاريع الأتمتة تتعثّر، مع خارطة طريق لتجاوزها.</p>
+        <div class="featured-meta">
+          <span>عبدالعزيز الدبيان</span><span>•</span><span>15 مايو 2026</span><span>•</span><span>12 دقيقة</span>
+          <span class="read-link">اقرأ المقال ←</span>
+        </div>
+      </div>
+    </a>
+
+    <div class="blog-grid">
+      <a href="blog-agent-vs-employee.html" class="blog-card reveal">
+        <div class="blog-thumb">
+          <svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice">
+            <rect width="400" height="250" fill="#fbfaf6"/>
+            <g stroke="#c89548" stroke-width="1.8" fill="none" opacity="0.55">
+              <rect x="50" y="80" width="80" height="50" rx="6"/>
+              <rect x="170" y="60" width="80" height="50" rx="6"/>
+              <rect x="290" y="100" width="80" height="50" rx="6"/>
+              <rect x="170" y="160" width="80" height="50" rx="6"/>
+              <path d="M130,105 L170,85"/><path d="M130,105 L170,185"/>
+              <path d="M250,85 L290,125"/><path d="M250,185 L290,125"/>
+            </g>
+            <circle cx="90" cy="105" r="4" fill="#c89548"/>
+            <circle cx="210" cy="85" r="4" fill="#f43f5e"/>
+            <circle cx="210" cy="185" r="4" fill="#7c3aed"/>
+            <circle cx="330" cy="125" r="4" fill="#14b8a6"/>
+          </svg>
+          <span class="cat">وكيل ذكي</span>
+        </div>
+        <div class="blog-body">
+          <h3>الفرق بين Workflow وAgentic AI: متى تحتاج كلًّا منهما؟</h3>
+          <p>الفرق الجوهري بين سير العمل التقليدي والوكيل الذكي، مع أمثلة من السوق السعودي.</p>
+          <div class="blog-meta"><span>8 دقائق</span><span class="arrow">اقرأ ←</span></div>
+        </div>
+      </a>
+
+      <a href="blog-n8n-vs-make.html" class="blog-card reveal">
+        <div class="blog-thumb">
+          <svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice">
+            <rect width="400" height="250" fill="#fbfaf6"/>
+            <g opacity="0.75">
+              <rect x="40" y="180" width="40" height="40" fill="#c89548"/>
+              <rect x="100" y="140" width="40" height="80" fill="#14b8a6"/>
+              <rect x="160" y="100" width="40" height="120" fill="#f43f5e"/>
+              <rect x="220" y="70" width="40" height="150" fill="#7c3aed"/>
+              <rect x="280" y="40" width="40" height="180" fill="#c89548"/>
+              <rect x="340" y="80" width="40" height="140" fill="#14b8a6"/>
+            </g>
+          </svg>
+          <span class="cat">أتمتة</span>
+        </div>
+        <div class="blog-body">
+          <h3>الموظف الرقمي: كيف يحرّر فريقك من 40 ساعة عمل أسبوعيًّا؟</h3>
+          <p>حساب اقتصادي مُفصّل بالأرقام، مع نموذج لحساب العائد على الاستثمار.</p>
+          <div class="blog-meta"><span>12 دقيقة</span><span class="arrow">اقرأ ←</span></div>
+        </div>
+      </a>
+
+      <a href="blog.html#" class="blog-card reveal"><span class="blog-card-soon">قريبًا</span>
+        <div class="blog-thumb">
+          <svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice">
+            <rect width="400" height="250" fill="#fbfaf6"/>
+            <g stroke="#14b8a6" stroke-width="2.2" fill="none" opacity="0.6">
+              <rect x="80" y="80" width="100" height="60" rx="8"/>
+              <rect x="220" y="80" width="100" height="60" rx="8"/>
+              <line x1="180" y1="110" x2="220" y2="110" stroke-dasharray="4 4"/>
+            </g>
+            <text x="130" y="115" text-anchor="middle" fill="#EA4B71" font-size="15" font-family="IBM Plex Sans Arabic" font-weight="700">n8n</text>
+            <text x="270" y="115" text-anchor="middle" fill="#6D00CC" font-size="15" font-family="IBM Plex Sans Arabic" font-weight="700">Make</text>
+            <text x="200" y="190" text-anchor="middle" fill="#7c3aed" font-size="13" font-family="IBM Plex Sans Arabic">VS</text>
+          </svg>
+          <span class="cat">أدوات</span>
+        </div>
+        <div class="blog-body">
+          <h3>n8n أم Make.com لعملك؟ مقارنة من واقع التطبيق</h3>
+          <p>مقارنة عمليّة بين الأداتين الأكثر استخدامًا في الأتمتة بناءً على تنفيذ 15 مشروعًا.</p>
+          <div class="blog-meta"><span>10 دقائق</span><span class="arrow">اقرأ ←</span></div>
+        </div>
+      </a>
+
+      <a href="blog.html#" class="blog-card reveal"><span class="blog-card-soon">قريبًا</span>
+        <div class="blog-thumb">
+          <svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice">
+            <rect width="400" height="250" fill="#fbfaf6"/>
+            <circle cx="100" cy="125" r="42" fill="#c89548" opacity="0.85"/>
+            <text x="100" y="132" text-anchor="middle" fill="white" font-size="26" font-weight="700">80</text>
+            <text x="100" y="200" text-anchor="middle" fill="#c89548" font-size="12" font-family="IBM Plex Sans Arabic">٪ تلقائيًّا</text>
+            <g stroke="#14b8a6" stroke-width="2.5" fill="none">
+              <path d="M180,125 L250,125"/>
+              <polyline points="240,115 250,125 240,135"/>
+            </g>
+            <g fill="none" stroke="#14b8a6" stroke-width="1.8">
+              <rect x="280" y="90" width="80" height="70" rx="8"/>
+              <line x1="290" y1="105" x2="350" y2="105"/>
+              <line x1="290" y1="120" x2="340" y2="120"/>
+              <line x1="290" y1="135" x2="345" y2="135"/>
+            </g>
+          </svg>
+          <span class="cat">خدمة العملاء</span>
+        </div>
+        <div class="blog-body">
+          <h3>وكيل خدمة العملاء الذكي: 80٪ من الاستفسارات تلقائيًّا</h3>
+          <p>دراسة حالة من عيادة سعوديّة استبدلت موظف استقبال بوكيل ذكي.</p>
+          <div class="blog-meta"><span>9 دقائق</span><span class="arrow">اقرأ ←</span></div>
+        </div>
+      </a>
+
+      <a href="blog.html#" class="blog-card reveal"><span class="blog-card-soon">قريبًا</span>
+        <div class="blog-thumb">
+          <svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice">
+            <rect width="400" height="250" fill="#fbfaf6"/>
+            <g opacity="0.8">
+              <rect x="60" y="60" width="120" height="130" rx="12" fill="#c89548" opacity="0.2"/>
+              <text x="120" y="160" text-anchor="middle" fill="#c89548" font-size="22" font-weight="700">3000ر</text>
+              <text x="120" y="178" text-anchor="middle" fill="#c89548" font-size="10" font-family="IBM Plex Sans Arabic">شهريًا</text>
+              <rect x="220" y="60" width="120" height="130" rx="12" fill="#7c3aed" opacity="0.2"/>
+              <text x="280" y="160" text-anchor="middle" fill="#7c3aed" font-size="22" font-weight="700">12000ر</text>
+              <text x="280" y="178" text-anchor="middle" fill="#7c3aed" font-size="10" font-family="IBM Plex Sans Arabic">شهريًا</text>
+            </g>
+          </svg>
+          <span class="cat">تحليل تكلفة</span>
+        </div>
+        <div class="blog-body">
+          <h3>وكيل ذكي مقابل موظف: الأرقام الحقيقيّة في السوق السعودي</h3>
+          <p>مقارنة شفّافة لتكلفة بناء وتشغيل وكيل ذكي مقابل توظيف بشري كامل.</p>
+          <div class="blog-meta"><span>14 دقيقة</span><span class="arrow">اقرأ ←</span></div>
+        </div>
+      </a>
+
+      <a href="blog.html#" class="blog-card reveal"><span class="blog-card-soon">قريبًا</span>
+        <div class="blog-thumb">
+          <svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice">
+            <rect width="400" height="250" fill="#fbfaf6"/>
+            <g opacity="0.7">
+              <circle cx="200" cy="125" r="85" stroke="#c89548" stroke-width="2.2" fill="none"/>
+              <circle cx="200" cy="125" r="62" stroke="#14b8a6" stroke-width="1.8" fill="none" opacity="0.7"/>
+              <circle cx="200" cy="125" r="40" stroke="#f43f5e" stroke-width="1.5" fill="none" opacity="0.6"/>
+              <circle cx="200" cy="125" r="9" fill="#c89548"/>
+            </g>
+          </svg>
+          <span class="cat">دليل تعليمي</span>
+        </div>
+        <div class="blog-body">
+          <h3>أنواع وكلاء الذكاء الاصطناعي الخمسة — كيف تختار النوع المناسب؟</h3>
+          <p>دليل مُبسّط للأنواع الرئيسيّة للوكلاء الذكيين مع توصيات عمليّة لكل نوع.</p>
+          <div class="blog-meta"><span>11 دقيقة</span><span class="arrow">اقرأ ←</span></div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section style="padding: 60px 0 100px;">
+  <div class="container">
+    <div style="background: var(--ink); border-radius: 28px; padding: 60px 50px; text-align: center; color: white; position: relative; overflow: hidden;" class="reveal">
+      <div style="position: absolute; top: -50%; right: -10%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(200, 149, 72, 0.2), transparent 70%); filter: blur(40px);"></div>
+      <h2 style="font-family: var(--font-display); font-size: clamp(1.5rem, 2.5vw, 2rem); font-weight: 700; margin-bottom: 12px; position: relative; z-index: 1;">احصل على المقالات أسبوعيًّا في بريدك.</h2>
+      <p style="color: rgba(255,255,255,0.75); margin-bottom: 28px; max-width: 520px; margin-right: auto; margin-left: auto; position: relative; z-index: 1;">مقال واحد كلّ أسبوع — تطبيقي ومُختصر.</p>
+      <form action="https://formspree.io/f/mykvkore" method="POST" style="display: flex; gap: 10px; max-width: 440px; margin: 0 auto; flex-wrap: wrap; justify-content: center; position: relative; z-index: 1;">
+        <input type="email" name="email" placeholder="بريدك الإلكتروني" required style="flex: 1; min-width: 220px; padding: 14px 18px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 11px; color: white; font-family: inherit; font-size: 0.94rem;">
+        <input type="hidden" name="_subject" value="اشتراك جديد في المدوّنة">
+        <button type="submit" style="background: var(--grad-warm); color: white; border: none; padding: 14px 24px; border-radius: 11px; font-family: inherit; font-weight: 700; cursor: pointer; box-shadow: var(--shadow-gold);">اشترك</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<a href="https://wa.me/966532544447" class="wa-float" target="_blank">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand-block">
+        <a href="index.html" class="brand">
+      <img src="assets/insiyab-mark-v4.svg?v=5" alt="InsiyabTech" style="height:46px;width:auto;display:block;flex-shrink:0;"><span style="display:flex;flex-direction:column;gap:1px;line-height:1.15;"><span style="font-family:'Poppins',sans-serif;font-size:1.05rem;font-weight:700;color:#ffffff;letter-spacing:-0.01em;">Insiyab<span style="background:linear-gradient(90deg,#f97316,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Tech</span></span><span style="font-family:'IBM Plex Sans Arabic',sans-serif;font-size:1.05rem;font-weight:700;color:#ffffff;">انسياب <span style="background:linear-gradient(90deg,#f97316,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">تيك</span></span></span>
+    </a>
+        <p>نبني وكلاء ذكاء اصطناعي وأنظمة أتمتة تُحرّر فريقك من المهامّ التكراريّة.</p>
+      </div>
+      <div class="footer-col"><h4>الموقع</h4><ul><li><a href="index.html">الرئيسية</a></li><li><a href="services.html">الخدمات</a></li><li><a href="guide.html">الدليل</a></li><li><a href="blog.html">المدوّنة</a></li></ul></div>
+      <div class="footer-col"><h4>الشركة</h4><ul><li><a href="about.html">من نحن</a></li><li><a href="contact.html">اتصل بنا</a></li><li><a href="privacy.html">سياسة الخصوصية</a></li><li><a href="terms.html">الشروط والأحكام</a></li></ul></div>
+      <div class="footer-col"><h4>تواصل مباشر</h4><ul><li><a href="https://wa.me/966532544447" target="_blank">واتساب: 0532544447</a></li><li><a href="mailto:info@insiyabtech.com.sa">info@insiyabtech.com.sa</a></li><li><a href="blog.html#">القصيم — المملكة العربيّة السعوديّة</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 انسياب تيك. جميع الحقوق محفوظة.</div>
+      <div class="socials">
+        <a href="https://x.com/insiyabtech" target="_blank" rel="noopener" aria-label="تويتر X">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/insiyabtech/" target="_blank" rel="noopener" aria-label="انستقرام">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="https://www.snapchat.com/add/insiyabtech" target="_blank" rel="noopener" aria-label="سناب شات">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.017 0C8.396 0 5.83 1.973 5.83 5.602v.668c0 .352-.028.7-.085 1.04-.223.131-.46.197-.71.197-.43 0-.84-.163-1.15-.43a.47.47 0 00-.31-.11c-.26 0-.5.2-.5.47 0 .03.004.06.01.09.12.57.63 1.01 1.25 1.18.067.02.134.035.2.047-.06.22-.13.42-.21.6-.46 1.03-1.38 1.73-2.31 1.73-.15 0-.3-.01-.44-.04a.47.47 0 00-.1-.01c-.26 0-.47.21-.47.47 0 .22.15.41.37.46.96.22 1.63.83 1.97 1.79.02.05.05.08.09.08.04 0 .37-.04.82-.04.59 0 1.42.08 2.23.52.7.38 1.27.97 2.46.97 1.17 0 1.76-.59 2.44-.97.81-.44 1.64-.52 2.23-.52.45 0 .78.04.82.04.04 0 .07-.03.09-.08.34-.96 1.01-1.57 1.97-1.79.22-.05.37-.24.37-.46 0-.26-.21-.47-.47-.47-.03 0-.07 0-.1.01-.14.03-.29.04-.44.04-.93 0-1.85-.7-2.31-1.73-.08-.18-.15-.38-.21-.6.066-.012.133-.027.2-.047.62-.17 1.13-.61 1.25-1.18.006-.03.01-.06.01-.09 0-.27-.24-.47-.5-.47-.11 0-.22.04-.31.11-.31.267-.72.43-1.15.43-.25 0-.487-.066-.71-.197a6.16 6.16 0 01-.085-1.04v-.668C18.17 1.973 15.638 0 12.017 0z"/></svg>
+        </a>
+        <a href="https://www.tiktok.com/@insiyabtech" target="_blank" rel="noopener" aria-label="تيك توك">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.76a4.85 4.85 0 01-1.01-.07z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+    // Mobile menu toggle
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navLinks = document.querySelector(".nav-links");
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("nav-open");
+    });
+  }
+
+  const io = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }); }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  document.querySelectorAll('.cat-pill').forEach(p => { p.addEventListener('click', (e) => { e.preventDefault(); document.querySelectorAll('.cat-pill').forEach(x => x.classList.remove('active')); p.classList.add('active'); }); });
+</script>
+
+
+<!-- BLOG MODAL -->
+<div class="blog-modal-overlay" id="blogModalOverlay" onclick="if(event.target===this)closeBlogModal()">
+  <div class="blog-modal">
+    <button class="blog-modal-close" onclick="closeBlogModal()">✕</button>
+    <div class="blog-modal-icon">📝</div>
+    <h3>المقال قيد الكتابة</h3>
+    <p>هذا الموضوع مهمّ جدًا — نعمل على نشر المقال قريبًا.</p>
+    <span class="blog-modal-title" id="modalArticleTitle"></span>
+    <p>في انتظاره، يمكنك التواصل معنا مباشرة وسنجيب على أسئلتك حول هذا الموضوع:</p>
+    <div class="blog-modal-btns">
+      <a href="https://wa.me/966532544447" class="blog-modal-wa" target="_blank">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 00-8.5 15.3L2 22l4.8-1.3A10 10 0 1012 2z"/></svg>
+        اسأل عبر الواتساب
+      </a>
+      <a href="contact.html" class="blog-modal-contact">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        أرسل سؤالك بالتفصيل
+      </a>
+    </div>
+  </div>
+</div>
+
+
+<script>
+function openBlogModal(el) {
+  const title = el.querySelector('h2,h3');
+  document.getElementById('modalArticleTitle').textContent = title ? title.textContent : '';
+  document.getElementById('blogModalOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeBlogModal() {
+  document.getElementById('blogModalOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if(e.key==='Escape') closeBlogModal(); });
+</script>
+
+</body>
+</html>

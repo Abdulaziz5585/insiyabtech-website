@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6P2CM4PPHQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-6P2CM4PPHQ');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدليل التطبيقي | انسياب تيك</title>
+  <link rel="icon" type="image/svg+xml" href="assets/insiyab-mark-v4.svg?v=5">
+  
+  
+  
+  
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* انسياب تيك - Light Premium Theme */
+
+:root {
+  /* Backgrounds */
+  --bg: #ffffff;
+  --bg-soft: #faf8f3;
+  --bg-section: #fbfaf6;
+  --bg-card: #ffffff;
+  --bg-dark: #0f1729;
+
+  /* Lines */
+  --line: #ece6d8;
+  --line-soft: rgba(15, 23, 41, 0.06);
+  --line-strong: #d9d2c0;
+
+  /* Ink (text) */
+  --ink: #0f1729;
+  --ink-soft: #4a5570;
+  --ink-muted: #7a8499;
+  --ink-faint: #adb4c4;
+  --ink-inverse: #fefcf7;
+
+  /* Brand colors */
+  --gold: #c89548;
+  --gold-bright: #e8b048;
+  --gold-dark: #a87a30;
+  --gold-soft: #f5ead0;
+  --coral: #f43f5e;
+  --coral-soft: #fde2e7;
+  --violet: #7c3aed;
+  --violet-soft: #ede4fc;
+  --mint: #14b8a6;
+  --mint-soft: #d4f4ef;
+  --navy: #0f1729;
+
+  /* Gradients */
+  --grad-warm: linear-gradient(135deg, #c89548 0%, #f43f5e 100%);
+  --grad-cool: linear-gradient(135deg, #14b8a6 0%, #7c3aed 100%);
+  --grad-primary: linear-gradient(135deg, #c89548 0%, #f43f5e 50%, #7c3aed 100%);
+  --grad-soft: linear-gradient(135deg, rgba(200, 149, 72, 0.08), rgba(124, 58, 237, 0.06));
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(15, 23, 41, 0.05), 0 1px 2px rgba(15, 23, 41, 0.04);
+  --shadow-md: 0 8px 24px -8px rgba(15, 23, 41, 0.12), 0 2px 6px rgba(15, 23, 41, 0.04);
+  --shadow-lg: 0 24px 50px -16px rgba(15, 23, 41, 0.15), 0 6px 14px rgba(15, 23, 41, 0.06);
+  --shadow-xl: 0 32px 80px -20px rgba(15, 23, 41, 0.2), 0 10px 20px rgba(15, 23, 41, 0.08);
+  --shadow-gold: 0 12px 32px -8px rgba(200, 149, 72, 0.4);
+
+  /* Fonts */
+  --font-display: 'IBM Plex Sans Arabic', sans-serif;
+  --font-body: 'IBM Plex Sans Arabic', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --max-width: 1280px;
+  --radius: 18px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.65;
+  overflow-x: hidden;
+  min-height: 100vh;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Subtle ambient gradient */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 50% at 80% 0%, rgba(200, 149, 72, 0.06), transparent 70%),
+    radial-gradient(ellipse 50% 40% at 0% 80%, rgba(124, 58, 237, 0.04), transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* Navigation */
+nav {
+  position: fixed; top: 0; right: 0; left: 0; z-index: 100;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  background: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid var(--line-soft);
+}
+.nav-inner {
+  max-width: var(--max-width); margin: 0 auto; padding: 14px 32px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--ink); }
+.brand-mark { width: 42px; height: 42px; }
+.brand-mark svg { width: 100%; height: 100%; }
+.brand-name {
+  font-family: var(--font-display);
+  font-size: 1.25rem; font-weight: 700;
+  letter-spacing: -0.01em; line-height: 1;
+}
+.brand-name span {
+  background: var(--grad-warm);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
+.nav-links { display: flex; gap: 32px; align-items: center; list-style: none; }
+.nav-links a {
+  color: var(--ink-soft); text-decoration: none;
+  font-size: 0.94rem; font-weight: 500;
+  transition: color 0.2s; position: relative;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--ink); }
+.nav-links a.active::after {
+  content: ''; position: absolute; bottom: -7px;
+  right: 0; left: 0; height: 2px;
+  background: var(--grad-warm); border-radius: 2px;
+}
+.nav-cta {
+  background: var(--navy);
+  color: white !important;
+  padding: 10px 22px; border-radius: 999px;
+  font-weight: 600; font-size: 0.9rem;
+  transition: all 0.25s;
+  box-shadow: var(--shadow-md);
+}
+.nav-cta:hover {
+  background: var(--grad-warm);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-gold);
+}
+.nav-cta::after { display: none !important; }
+.menu-toggle { display: none; background: none; border: none; color: var(--ink); cursor: pointer; }
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 16px 28px; border-radius: 12px;
+  font-weight: 600; font-size: 1rem;
+  text-decoration: none; transition: all 0.25s;
+  cursor: pointer; border: none; font-family: inherit;
+  position: relative; overflow: hidden;
+}
+.btn-primary {
+  background: var(--navy);
+  color: white;
+  box-shadow: var(--shadow-md);
+}
+.btn-primary::before {
+  content: ''; position: absolute; inset: 0;
+  background: var(--grad-warm);
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 0;
+}
+.btn-primary > * { position: relative; z-index: 1; }
+.btn-primary:hover::before { opacity: 1; }
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-gold);
+}
+.btn-gold {
+  background: var(--grad-warm);
+  color: white;
+  box-shadow: var(--shadow-gold);
+}
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px -10px rgba(200, 149, 72, 0.5);
+}
+.btn-ghost {
+  background: white;
+  color: var(--ink);
+  border: 1px solid var(--line-strong);
+}
+.btn-ghost:hover {
+  border-color: var(--gold);
+  background: var(--gold-soft);
+  transform: translateY(-2px);
+}
+.btn svg { transition: transform 0.2s; }
+.btn:hover svg { transform: translateX(-3px); }
+
+/* Sections */
+section { padding: 100px 0; position: relative; }
+
+.section-head { margin-bottom: 60px; max-width: 760px; }
+.section-head.center { text-align: center; margin-right: auto; margin-left: auto; }
+.section-eyebrow {
+  font-family: var(--font-mono); font-size: 0.78rem;
+  color: var(--gold-dark);
+  text-transform: uppercase; letter-spacing: 0.12em;
+  margin-bottom: 18px;
+  display: flex; align-items: center; gap: 12px;
+  font-weight: 600;
+}
+.section-head.center .section-eyebrow { justify-content: center; }
+.section-eyebrow::before {
+  content: ''; width: 28px; height: 1.5px;
+  background: var(--grad-warm); border-radius: 2px;
+}
+h2.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 700; letter-spacing: -0.02em;
+  line-height: 1.2; margin-bottom: 20px;
+  color: var(--ink);
+}
+h2.section-title .light { color: var(--ink-muted); font-weight: 400; }
+h2.section-title .gradient {
+  background: var(--grad-primary);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.section-desc {
+  font-size: 1.08rem; color: var(--ink-soft); line-height: 1.75;
+}
+
+/* Footer */
+footer {
+  background: var(--bg-dark);
+  color: rgba(255, 255, 255, 0.7);
+  padding: 70px 0 32px;
+  position: relative; z-index: 2;
+}
+.footer-grid {
+  display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 48px; margin-bottom: 48px;
+}
+.footer-brand-block .brand { color: white; }
+.footer-brand-block .brand-name { color: white; }
+.footer-brand-block p {
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 16px; line-height: 1.7;
+  font-size: 0.94rem; max-width: 320px;
+}
+.footer-col h4 {
+  font-family: var(--font-display);
+  font-size: 0.94rem; color: white;
+  margin-bottom: 20px; font-weight: 700;
+}
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 12px; }
+.footer-col a {
+  color: rgba(255, 255, 255, 0.55);
+  text-decoration: none;
+  font-size: 0.91rem; transition: color 0.2s;
+}
+.footer-col a:hover { color: var(--gold-bright); }
+.footer-bottom {
+  padding-top: 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 0.85rem; color: rgba(255, 255, 255, 0.45);
+  flex-wrap: wrap; gap: 16px;
+}
+.socials { display: flex; gap: 14px; align-items: center; }
+.socials a {
+  display: flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px; border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.7);
+  transition: background 0.2s, color 0.2s;
+  text-decoration: none;
+}
+.socials a:hover {
+  background: var(--grad-warm);
+  color: #fff;
+}
+.socials svg { width: 18px; height: 18px; }
+
+/* Reveal animations */
+.reveal {
+  opacity: 0; transform: translateY(28px);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.in { opacity: 1; transform: translateY(0); }
+.reveal-scale {
+  opacity: 0; transform: scale(0.94);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-scale.in { opacity: 1; transform: scale(1); }
+
+/* Page hero (inner pages) */
+.page-hero { padding: 140px 0 60px; position: relative; }
+.page-hero::after {
+  content: ''; position: absolute;
+  bottom: 0; right: 10%; left: 10%;
+  height: 1px;
+  background: linear-gradient(to left, transparent, var(--gold), var(--violet), transparent);
+  opacity: 0.3;
+}
+.page-hero .breadcrumb {
+  font-family: var(--font-mono); font-size: 0.8rem;
+  color: var(--gold-dark);
+  text-transform: uppercase; letter-spacing: 0.1em;
+  margin-bottom: 20px; font-weight: 600;
+}
+.page-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+  font-weight: 700; letter-spacing: -0.025em;
+  line-height: 1.15; margin-bottom: 20px; max-width: 920px;
+  color: var(--ink);
+}
+.page-hero h1 .accent {
+  background: var(--grad-primary);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.page-hero .subtitle {
+  font-size: 1.18rem; color: var(--ink-soft);
+  max-width: 760px; line-height: 1.7;
+}
+
+/* WhatsApp floating */
+.wa-float {
+  position: fixed; bottom: 24px; left: 24px; z-index: 90;
+  width: 58px; height: 58px;
+  background: linear-gradient(135deg, #25d366, #128c7e);
+  border-radius: 50%; display: grid; place-items: center;
+  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+  text-decoration: none; color: white;
+  transition: transform 0.3s;
+  animation: wa-pulse 2.5s ease-in-out infinite;
+}
+.wa-float:hover { transform: scale(1.1) rotate(-5deg); }
+.wa-float svg { width: 28px; height: 28px; }
+@keyframes wa-pulse {
+  0%, 100% { box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4), 0 0 0 0 rgba(37, 211, 102, 0.5); }
+  50% { box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4), 0 0 0 18px rgba(37, 211, 102, 0); }
+}
+
+@media (max-width: 1024px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 720px) {
+  .container { padding: 0 20px; }
+  nav .nav-links { display: none; }
+  nav .menu-toggle { display: block; }
+  .nav-cta { display: none; }
+  section { padding: 70px 0; }
+  .page-hero { padding: 110px 0 40px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .wa-float { bottom: 16px; left: 16px; width: 52px; height: 52px; }
+  .wa-float svg { width: 26px; height: 26px; }
+}
+
+  nav .nav-links.nav-open {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 75%;
+    max-width: 300px;
+    height: 100vh;
+    background: var(--bg, #ffffff);
+    box-shadow: -4px 0 24px rgba(0,0,0,0.12);
+    padding: 80px 28px 40px;
+    gap: 8px;
+    z-index: 9999;
+    overflow-y: auto;
+  }
+  nav .nav-links.nav-open a {
+    font-size: 1.1rem;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.07);
+    display: block;
+  }
+  nav .nav-links.nav-open .nav-cta {
+    display: block !important;
+    margin-top: 16px;
+    text-align: center;
+  }
+</style>
+
+<style>
+  .guide-layout { display: grid; grid-template-columns: 260px 1fr; gap: 50px; align-items: start; }
+  .guide-toc { position: sticky; top: 90px; padding: 24px; background: white; border: 1px solid var(--line-soft); border-radius: 16px; box-shadow: var(--shadow-sm); }
+  .guide-toc h4 { font-family: var(--font-mono); font-size: 0.78rem; color: var(--ink-muted); margin-bottom: 14px; letter-spacing: 0.08em; text-transform: uppercase; padding-bottom: 12px; border-bottom: 1px solid var(--line-soft); }
+  .toc-list { list-style: none; padding: 0; }
+  .toc-list li { margin-bottom: 6px; }
+  .toc-list a { color: var(--ink-soft); text-decoration: none; font-size: 0.9rem; display: block; padding: 7px 10px; border-radius: 8px; transition: all 0.2s; border-right: 2px solid transparent; }
+  .toc-list a:hover { color: var(--ink); background: var(--bg-soft); border-right-color: var(--gold); }
+  .toc-list a.active { color: var(--gold-dark); background: var(--gold-soft); border-right-color: var(--gold); font-weight: 600; }
+
+  .guide-content { max-width: 760px; }
+  .guide-section { padding-bottom: 50px; margin-bottom: 50px; border-bottom: 1px solid var(--line-soft); }
+  .guide-section:last-child { border-bottom: none; }
+  .section-num { display: inline-block; font-family: var(--font-mono); color: var(--gold-dark); font-size: 0.82rem; margin-bottom: 12px; letter-spacing: 0.08em; font-weight: 600; }
+  .guide-section h2 { font-family: var(--font-display); font-size: clamp(1.6rem, 2.4vw, 2.1rem); font-weight: 700; margin-bottom: 22px; letter-spacing: -0.02em; line-height: 1.25; color: var(--ink); }
+  .guide-section h3 { font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; margin: 28px 0 12px; color: var(--ink); }
+  .guide-section p { color: var(--ink); line-height: 1.85; font-size: 1.02rem; margin-bottom: 16px; }
+  .guide-section p.muted { color: var(--ink-soft); }
+  .guide-section strong { color: var(--gold-dark); font-weight: 700; }
+  .guide-section ul, .guide-section ol { margin: 16px 0 20px; padding-right: 22px; color: var(--ink); }
+  .guide-section li { margin-bottom: 9px; line-height: 1.75; font-size: 1rem; }
+  .guide-section li::marker { color: var(--gold-dark); }
+
+  .info-box { padding: 20px 24px; background: var(--gold-soft); border-right: 3px solid var(--gold); border-radius: 0 12px 12px 0; margin: 22px 0; }
+  .info-box.warning { background: var(--coral-soft); border-right-color: var(--coral); }
+  .info-box.tip { background: var(--mint-soft); border-right-color: var(--mint); }
+  .info-box-title { font-family: var(--font-display); font-weight: 700; margin-bottom: 8px; display: flex; align-items: center; gap: 10px; color: var(--gold-dark); }
+  .info-box.warning .info-box-title { color: var(--coral); }
+  .info-box.tip .info-box-title { color: #0d9488; }
+  .info-box p { color: var(--ink); margin-bottom: 0; font-size: 0.96rem; }
+
+  .comparison-table { width: 100%; border-collapse: collapse; margin: 22px 0; font-size: 0.93rem; background: white; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-sm); }
+  .comparison-table th { background: var(--bg-soft); color: var(--ink); padding: 14px 18px; font-family: var(--font-display); font-weight: 700; font-size: 0.9rem; text-align: right; border-bottom: 1px solid var(--line); }
+  .comparison-table td { padding: 13px 18px; border-bottom: 1px solid var(--line-soft); color: var(--ink); }
+  .comparison-table tr:last-child td { border-bottom: none; }
+
+  .check-list { list-style: none !important; padding: 0 !important; }
+  .check-list li { padding: 10px 30px 10px 0; position: relative; }
+  .check-list li::before { content: '✓'; position: absolute; right: 0; top: 11px; color: var(--mint); font-weight: 700; font-size: 1.05rem; }
+
+  @media (max-width: 1024px) { .guide-layout { grid-template-columns: 1fr; } .guide-toc { position: static; } }
+  nav .nav-links.nav-open {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 75%;
+    max-width: 300px;
+    height: 100vh;
+    background: var(--bg, #ffffff);
+    box-shadow: -4px 0 24px rgba(0,0,0,0.12);
+    padding: 80px 28px 40px;
+    gap: 8px;
+    z-index: 9999;
+    overflow-y: auto;
+  }
+  nav .nav-links.nav-open a {
+    font-size: 1.1rem;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.07);
+    display: block;
+  }
+  nav .nav-links.nav-open .nav-cta {
+    display: block !important;
+    margin-top: 16px;
+    text-align: center;
+  }
+</style>
+<style id="insiyab-global-polish">.it-nav-lang{font-family:Poppins,system-ui,sans-serif!important;font-size:.72rem!important;letter-spacing:.03em!important;border:1px solid rgba(15,23,41,.12);border-radius:10px;padding:8px 11px!important}.it-nav-lang:hover{border-color:#ff5a47!important}.brand img{filter:none!important;mix-blend-mode:normal!important;opacity:1!important}.nav-inner{gap:14px}.nav-links{gap:14px!important}.nav-links a{white-space:nowrap}@media(max-width:1180px){.nav-links{gap:10px!important}.nav-links a{font-size:.82rem!important}.it-nav-lang{padding:7px 9px!important}}@media(max-width:980px){.it-nav-lang{border:0;padding:12px 0!important}}</style>
+<meta name="description" content="دليل عربي تطبيقي لفهم وبناء واستخدام وكلاء الذكاء الاصطناعي والأتمتة داخل الأعمال السعودية.">
+<link rel="canonical" href="https://insiyabtech.com.sa/guide.html">
+<meta property="og:locale" content="ar_SA">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="InsiyabTech">
+<meta property="og:title" content="الدليل التطبيقي | انسياب تيك">
+<meta property="og:description" content="دليل عربي تطبيقي لفهم وبناء واستخدام وكلاء الذكاء الاصطناعي والأتمتة داخل الأعمال السعودية.">
+<meta property="og:url" content="https://insiyabtech.com.sa/guide.html">
+<meta property="og:image" content="https://insiyabtech.com.sa/assets/insiyab-mark-v4.svg?v=5?v=5">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="الدليل التطبيقي | انسياب تيك">
+<meta name="twitter:description" content="دليل عربي تطبيقي لفهم وبناء واستخدام وكلاء الذكاء الاصطناعي والأتمتة داخل الأعمال السعودية.">
+<meta name="twitter:image" content="https://insiyabtech.com.sa/assets/insiyab-mark-v4.svg?v=5?v=5">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"InsiyabTech","alternateName":"انسياب تيك","url":"https://insiyabtech.com.sa","logo":"https://insiyabtech.com.sa/assets/insiyab-mark-v4.svg?v=5?v=5","email":"info@insiyabtech.com.sa","sameAs":["https://x.com/insiyabtech","https://www.instagram.com/insiyabtech/","https://www.tiktok.com/@insiyabtech"]}</script>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <img src="assets/insiyab-mark-v4.svg?v=5" alt="InsiyabTech" style="height:46px;width:auto;display:block;flex-shrink:0;"><span style="display:flex;flex-direction:column;gap:1px;line-height:1.15;"><span style="font-family:'Poppins',sans-serif;font-size:1.05rem;font-weight:700;color:#0f1729;letter-spacing:-0.01em;">Insiyab<span style="background:linear-gradient(90deg,#f97316,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Tech</span></span><span style="font-family:'IBM Plex Sans Arabic',sans-serif;font-size:1.05rem;font-weight:700;color:#0f1729;">انسياب <span style="background:linear-gradient(90deg,#f97316,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">تيك</span></span></span>
+    </a>
+    <ul class="nav-links">
+<li><a href="index.html">الرئيسية</a></li><li><a href="about.html">من نحن</a></li><li><a href="services.html">الخدمات</a></li><li><a href="solutions.html">الحلول</a></li><li><a href="index.html#work">نماذج الأعمال</a></li><li><a href="blog.html">المعرفة</a></li><li><a href="contact.html">تواصل معنا</a></li><li><a href="index.html" class="it-nav-lang" onclick="try{localStorage.setItem('insiyab-lang','en')}catch(e){}">ENGLISH</a></li>
+</ul>
+    <button class="menu-toggle"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">الرئيسية / الدليل التطبيقي</div>
+    <h1>الدليل التطبيقي <span class="accent">لبناء وكلاء ذكاء اصطناعي</span> للأعمال السعوديّة.</h1>
+    <p class="subtitle">من الصفر إلى التشغيل. مرجع كامل بالعربية، بدون مصطلحات تقنيّة معقّدة، وبدون حشو نظري.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="guide-layout">
+      <aside class="guide-toc reveal">
+        <h4>محتوى الدليل</h4>
+        <ul class="toc-list">
+          <li><a href="guide.html#sec1" class="active">1. ما هو وكيل الذكاء الاصطناعي؟</a></li>
+          <li><a href="guide.html#sec2">2. الفرق عن الشات بوت</a></li>
+          <li><a href="guide.html#sec3">3. أنواع الوكلاء الخمسة</a></li>
+          <li><a href="guide.html#sec4">4. متى تحتاجه فعلًا؟</a></li>
+          <li><a href="guide.html#sec5">5. حساب التكلفة الحقيقيّة</a></li>
+          <li><a href="guide.html#sec6">6. اختيار الأداة المناسبة</a></li>
+        </ul>
+      </aside>
+
+      <article class="guide-content">
+        <div class="guide-section reveal" id="sec1">
+          <div class="section-num">— الفصل الأول</div>
+          <h2>ما هو وكيل الذكاء الاصطناعي؟</h2>
+          <p>وكيل الذكاء الاصطناعي (AI Agent) هو برنامج ذكي يقوم بمهامّ كاملة نيابة عن الإنسان — ليس مجرّد ردّ على سؤال، بل تنفيذ عمليّة كاملة من بدايتها لنهايتها. تخيّله موظفًا رقميًّا يفهم اللغة الطبيعيّة، يتّخذ قرارات بناءً على القواعد التي تُحدّدها، يتّصل بالأنظمة والقواعد، ويُنجز المهمّة.</p>
+
+          <h3>ما يميّز الوكيل؟</h3>
+          <ul>
+            <li><strong>الفهم</strong> — يفهم نيّة العميل من كلامه الطبيعي، حتى لو صاغ السؤال بطرق مختلفة.</li>
+            <li><strong>القرار</strong> — يقرّر الخطوة التالية حسب السياق والقواعد التي وضعتها.</li>
+            <li><strong>التنفيذ</strong> — يتفاعل مع أنظمتك (الحجوزات، المخزون، الفواتير) لإنجاز المهمّة.</li>
+            <li><strong>التعلّم</strong> — يتحسّن مع الوقت من خلال التفاعلات والتغذية الراجعة.</li>
+          </ul>
+
+          <div class="info-box tip">
+            <div class="info-box-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21h6M12 17v4M12 3a6 6 0 016 6c0 3-2 5-3 6H9c-1-1-3-3-3-6a6 6 0 016-6z"/></svg>
+              فكرة محوريّة
+            </div>
+            <p>اعتبره موظفًا جديدًا في فريقك — تدرّبه على مهامّك، تشرح له القواعد، تعطيه صلاحيّات محدّدة، ثم يعمل بشكل مستقلّ ويصعّد إليك القرارات التي تتجاوز صلاحيّاته.</p>
+          </div>
+        </div>
+
+        <div class="guide-section reveal" id="sec2">
+          <div class="section-num">— الفصل الثاني</div>
+          <h2>الفرق بين الوكيل الذكي والشات بوت التقليدي</h2>
+          <p>كثيرون يخلطون بين المفهومين. الفرق جوهري، ومن المهمّ فهمه قبل أن تتّخذ قرار الاستثمار:</p>
+
+          <table class="comparison-table">
+            <thead><tr><th>المعيار</th><th>الشات بوت التقليدي</th><th>الوكيل الذكي</th></tr></thead>
+            <tbody>
+              <tr><td>طريقة الردّ</td><td>قوالب جاهزة مكتوبة</td><td>توليد طبيعي حسب السياق</td></tr>
+              <tr><td>فهم اللغة</td><td>كلمات مفتاحيّة فقط</td><td>يفهم النيّة الكاملة</td></tr>
+              <tr><td>التنفيذ</td><td>يردّ فقط</td><td>يتّخذ قرارات وينفّذ</td></tr>
+              <tr><td>التعلّم</td><td>ثابت</td><td>يتحسّن مع الاستخدام</td></tr>
+              <tr><td>التكامل</td><td>محدود جدًّا</td><td>متّصل بأنظمتك</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="guide-section reveal" id="sec3">
+          <div class="section-num">— الفصل الثالث</div>
+          <h2>أنواع الوكلاء الذكيين الخمسة</h2>
+          <p>ليست كلّ الوكلاء متشابهة. اختيار النوع الصحيح يوفّر عليك وقتًا وتكلفة:</p>
+
+          <h3>1. وكيل ردّ بسيط (Reactive Agent)</h3>
+          <p class="muted">يستجيب لمدخلات محدّدة برد محدّد. مناسب للأسئلة الشائعة والمعلومات الثابتة.</p>
+
+          <h3>2. وكيل مهامّ (Task Agent)</h3>
+          <p class="muted">ينفّذ مهامّ محدّدة من بدايتها لنهايتها. مثاله: استقبال الحجوزات في عيادة.</p>
+
+          <h3>3. وكيل ذو ذاكرة (Memory Agent)</h3>
+          <p class="muted">يتذكّر التفاعلات السابقة مع نفس العميل، مثل تفضيلاته واهتماماته.</p>
+
+          <h3>4. وكيل تخطيطي (Planning Agent)</h3>
+          <p class="muted">يضع خططًا متعدّدة الخطوات. مثاله: وكيل سفر يبحث عن رحلات ويحجز.</p>
+
+          <h3>5. وكيل تعاوني (Multi-Agent System)</h3>
+          <p class="muted">منظومة من عدّة وكلاء يتعاونون — كلٌّ في تخصّصه.</p>
+        </div>
+
+        <div class="guide-section reveal" id="sec4">
+          <div class="section-num">— الفصل الرابع</div>
+          <h2>متى تحتاج وكيلًا ذكيًّا فعلًا؟</h2>
+          <p>الوكيل ليس حلًّا سحريًّا لكلّ مشكلة. هنا الحالات التي يكون فيها الاستثمار مُبرّرًا:</p>
+
+          <ul class="check-list">
+            <li>تكرّر نفس الأسئلة أكثر من 20 مرّة يوميًّا من عملاء مختلفين</li>
+            <li>تخسر عملاء يتواصلون خارج أوقات الدوام دون ردّ</li>
+            <li>فريقك يقضي أكثر من 30٪ من وقته في مهامّ متكرّرة</li>
+            <li>لديك بيانات منتشرة بين عدّة أنظمة وتحتاج ربطًا</li>
+            <li>تكلفة التوظيف البشري الإضافي أعلى من الفائدة المتوقّعة</li>
+          </ul>
+
+          <div class="info-box warning">
+            <div class="info-box-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              متى لا تحتاج وكيلًا؟
+            </div>
+            <p>إذا كانت تفاعلاتك اليوميّة قليلة (أقلّ من 10 يوميًّا)، أو طبيعة عملك تتطلّب تواصلًا بشريًّا حصريًّا، أو ميزانيّتك لا تسمح بتكلفة البناء والصيانة — فالأولى تأجيل الخطوة.</p>
+          </div>
+        </div>
+
+        <div class="guide-section reveal" id="sec5">
+          <div class="section-num">— الفصل الخامس</div>
+          <h2>حساب التكلفة الحقيقيّة: وكيل ذكي مقابل توظيف بشري</h2>
+          <p>الأرقام تتحدّث. لنُقارن بشكل واضح:</p>
+
+          <table class="comparison-table">
+            <thead><tr><th>البند</th><th>موظف بشري</th><th>وكيل ذكي</th></tr></thead>
+            <tbody>
+              <tr><td>تكلفة شهريّة مباشرة</td><td>4000 — 7000 ريال</td><td>متغيّرة حسب الاستخدام</td></tr>
+              <tr><td>تكاليف ثانويّة</td><td>تأمين، إجازات، تدريب</td><td>صيانة دوريّة فقط</td></tr>
+              <tr><td>ساعات العمل</td><td>8 ساعات × 22 يوم</td><td>24 × 7 × 365</td></tr>
+              <tr><td>السرعة في الردّ</td><td>دقائق إلى ساعات</td><td>ثوانٍ</td></tr>
+              <tr><td>التوسعة</td><td>توظيف إضافي</td><td>زيادة الباقة فقط</td></tr>
+            </tbody>
+          </table>
+
+          <p class="muted">طبعًا، الوكيل لا يحلّ محلّ الموظف البشري كلّيًا — لكنّه يتعامل مع 70—80٪ من الحالات المتكرّرة، ويُحرّر فريقك للتركيز على الحالات المعقّدة.</p>
+        </div>
+
+        <div class="guide-section reveal" id="sec6">
+          <div class="section-num">— الفصل السادس</div>
+          <h2>اختيار الأداة المناسبة لبناء وكيلك</h2>
+          <p>السوق مليء بالأدوات. هذه توصياتنا حسب الحالة:</p>
+
+          <h3>للمشاريع الصغيرة والمبتدئين</h3>
+          <p><strong>Make.com</strong> — واجهة مرئيّة سهلة، مناسبة لتعلّم المفاهيم.</p>
+
+          <h3>للمشاريع الجادّة والشركات النامية</h3>
+          <p><strong>n8n</strong> — أقوى وأكثر مرونة، يدعم الاستضافة الذاتيّة. هذا ما نعتمد عليه في معظم مشاريعنا.</p>
+
+          <h3>للوكلاء المتقدّمة</h3>
+          <p><strong>n8n + Claude / OpenAI</strong> — الجمع بين أداة الأتمتة ونموذج لغوي قوي يُعطيك وكيلًا حقيقيًّا.</p>
+
+          <div class="info-box">
+            <div class="info-box-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+              نصيحة من الميدان
+            </div>
+            <p>لا تختر الأداة لأنّها "الأحدث". اختر الأداة التي يستطيع فريقك تشغيلها بعد التسليم — أو الشريك التقني الذي يضمن دعمها.</p>
+          </div>
+        </div>
+
+        <div style="background: var(--ink); border-radius: 24px; padding: 50px; text-align: center; color: white; margin-top: 40px; position: relative; overflow: hidden;" class="reveal">
+          <div style="position: absolute; top: -50%; right: -10%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(200, 149, 72, 0.2), transparent 70%); filter: blur(40px);"></div>
+          <h2 style="font-family: var(--font-display); font-size: 1.6rem; font-weight: 700; margin-bottom: 14px; position: relative; z-index: 1;">جاهز للخطوة التالية؟</h2>
+          <p style="color: rgba(255,255,255,0.75); margin-bottom: 26px; position: relative; z-index: 1;">احجز جلسة تشخيص مجّانيّة، ونرى معًا أيّ نوع وكيل يناسب عملك.</p>
+          <a href="contact.html" class="btn btn-gold" style="position: relative; z-index: 1;">احجز جلستك المجّانيّة</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<a href="https://wa.me/966532544447" class="wa-float" target="_blank">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand-block">
+        <a href="index.html" class="brand">
+      <img src="assets/insiyab-mark-v4.svg?v=5" alt="InsiyabTech" style="height:46px;width:auto;display:block;flex-shrink:0;"><span style="display:flex;flex-direction:column;gap:1px;line-height:1.15;"><span style="font-family:'Poppins',sans-serif;font-size:1.05rem;font-weight:700;color:#ffffff;letter-spacing:-0.01em;">Insiyab<span style="background:linear-gradient(90deg,#f97316,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Tech</span></span><span style="font-family:'IBM Plex Sans Arabic',sans-serif;font-size:1.05rem;font-weight:700;color:#ffffff;">انسياب <span style="background:linear-gradient(90deg,#f97316,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">تيك</span></span></span>
+    </a>
+        <p>نبني وكلاء ذكاء اصطناعي وأنظمة أتمتة تُحرّر فريقك من المهامّ التكراريّة.</p>
+      </div>
+      <div class="footer-col"><h4>الموقع</h4><ul><li><a href="index.html">الرئيسية</a></li><li><a href="services.html">الخدمات</a></li><li><a href="guide.html">الدليل</a></li><li><a href="blog.html">المدوّنة</a></li></ul></div>
+      <div class="footer-col"><h4>الشركة</h4><ul><li><a href="about.html">من نحن</a></li><li><a href="contact.html">اتصل بنا</a></li><li><a href="privacy.html">سياسة الخصوصية</a></li><li><a href="terms.html">الشروط والأحكام</a></li></ul></div>
+      <div class="footer-col"><h4>تواصل مباشر</h4><ul><li><a href="https://wa.me/966532544447" target="_blank">واتساب: 0532544447</a></li><li><a href="mailto:info@insiyabtech.com.sa">info@insiyabtech.com.sa</a></li><li><a href="guide.html#">القصيم — المملكة العربيّة السعوديّة</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 انسياب تيك. جميع الحقوق محفوظة.</div>
+      <div class="socials">
+        <a href="https://x.com/insiyabtech" target="_blank" rel="noopener" aria-label="تويتر X">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/insiyabtech/" target="_blank" rel="noopener" aria-label="انستقرام">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="https://www.snapchat.com/add/insiyabtech" target="_blank" rel="noopener" aria-label="سناب شات">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.017 0C8.396 0 5.83 1.973 5.83 5.602v.668c0 .352-.028.7-.085 1.04-.223.131-.46.197-.71.197-.43 0-.84-.163-1.15-.43a.47.47 0 00-.31-.11c-.26 0-.5.2-.5.47 0 .03.004.06.01.09.12.57.63 1.01 1.25 1.18.067.02.134.035.2.047-.06.22-.13.42-.21.6-.46 1.03-1.38 1.73-2.31 1.73-.15 0-.3-.01-.44-.04a.47.47 0 00-.1-.01c-.26 0-.47.21-.47.47 0 .22.15.41.37.46.96.22 1.63.83 1.97 1.79.02.05.05.08.09.08.04 0 .37-.04.82-.04.59 0 1.42.08 2.23.52.7.38 1.27.97 2.46.97 1.17 0 1.76-.59 2.44-.97.81-.44 1.64-.52 2.23-.52.45 0 .78.04.82.04.04 0 .07-.03.09-.08.34-.96 1.01-1.57 1.97-1.79.22-.05.37-.24.37-.46 0-.26-.21-.47-.47-.47-.03 0-.07 0-.1.01-.14.03-.29.04-.44.04-.93 0-1.85-.7-2.31-1.73-.08-.18-.15-.38-.21-.6.066-.012.133-.027.2-.047.62-.17 1.13-.61 1.25-1.18.006-.03.01-.06.01-.09 0-.27-.24-.47-.5-.47-.11 0-.22.04-.31.11-.31.267-.72.43-1.15.43-.25 0-.487-.066-.71-.197a6.16 6.16 0 01-.085-1.04v-.668C18.17 1.973 15.638 0 12.017 0z"/></svg>
+        </a>
+        <a href="https://www.tiktok.com/@insiyabtech" target="_blank" rel="noopener" aria-label="تيك توك">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.76a4.85 4.85 0 01-1.01-.07z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+    // Mobile menu toggle
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navLinks = document.querySelector(".nav-links");
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("nav-open");
+    });
+  }
+
+  const io = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }); }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  const sections = document.querySelectorAll('.guide-section');
+  const tocLinks = document.querySelectorAll('.toc-list a');
+  const tocObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const id = e.target.id;
+        tocLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + id));
+      }
+    });
+  }, { rootMargin: '-30% 0px -60% 0px' });
+  sections.forEach(s => tocObserver.observe(s));
+</script>
+
+</body>
+</html>

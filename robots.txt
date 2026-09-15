@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://insiyabtech.com.sa/sitemap.xml
