@@ -28,7 +28,11 @@ NAV = '''<ul class="nav-links">
 <li><a href="index.html">الرئيسية</a></li><li><a href="about.html">من نحن</a></li><li><a href="services.html">الخدمات</a></li><li><a href="solutions.html">الحلول</a></li><li><a href="index.html#work">نماذج الأعمال</a></li><li><a href="blog.html">المعرفة</a></li><li><a href="contact.html">تواصل معنا</a></li><li><a href="index.html" class="it-nav-lang" onclick="try{localStorage.setItem('insiyab-lang','en')}catch(e){}">ENGLISH</a></li>
 </ul>'''
 
-POLISH = '''<style id="insiyab-global-polish">.it-nav-lang{font-family:Poppins,system-ui,sans-serif!important;font-size:.72rem!important;letter-spacing:.03em!important;border:1px solid rgba(15,23,41,.12);border-radius:10px;padding:8px 11px!important}.it-nav-lang:hover{border-color:#ff5a47!important}.brand img{filter:none!important;mix-blend-mode:normal!important;opacity:1!important}.nav-inner{gap:14px}.nav-links{gap:14px!important}.nav-links a{white-space:nowrap}@media(max-width:1180px){.nav-links{gap:10px!important}.nav-links a{font-size:.82rem!important}.it-nav-lang{padding:7px 9px!important}}@media(max-width:980px){.it-nav-lang{border:0;padding:12px 0!important}}</style>'''
+POLISH = '''<style id="insiyab-global-polish">
+:root{--gold:#ff8a00!important;--gold-bright:#ff9f1a!important;--gold-dark:#d95f00!important;--gold-soft:#fff1e7!important;--coral:#ff5a47!important;--violet:#f3006f!important;--violet-soft:#ffe2ef!important;--grad-warm:linear-gradient(105deg,#ff8a00 0%,#ff5a47 48%,#f3006f 100%)!important;--grad-primary:linear-gradient(105deg,#ff8a00 0%,#ff5a47 48%,#f3006f 100%)!important}
+.it-nav-lang{font-family:Poppins,system-ui,sans-serif!important;font-size:.72rem!important;letter-spacing:.03em!important;border:1px solid rgba(15,23,41,.12);border-radius:10px;padding:8px 11px!important}.it-nav-lang:hover{border-color:#ff5a47!important}.brand img{filter:none!important;mix-blend-mode:normal!important;opacity:1!important}.nav-inner{gap:14px}.nav-links{gap:14px!important}.nav-links a{white-space:nowrap}a:focus-visible,button:focus-visible{outline:3px solid rgba(255,90,71,.35)!important;outline-offset:3px!important}
+@media(max-width:1180px){.nav-links{gap:10px!important}.nav-links a{font-size:.82rem!important}.it-nav-lang{padding:7px 9px!important}}@media(max-width:980px){.it-nav-lang{border:0;padding:12px 0!important}}
+</style>'''
 
 GA = f'''<script async src="https://www.googletagmanager.com/gtag/js?id={GA_ID}"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments)}}gtag('js',new Date());gtag('config','{GA_ID}');</script>'''
 ORG = {"@context":"https://schema.org","@type":"Organization","name":"InsiyabTech","alternateName":"انسياب تيك","url":BASE,"logo":OGIMG,"email":"info@insiyabtech.com.sa","sameAs":["https://x.com/insiyabtech","https://www.instagram.com/insiyabtech/","https://www.tiktok.com/@insiyabtech"]}
@@ -37,9 +41,10 @@ def escape_attr(v):
     return v.replace('&','&amp;').replace('"','&quot;').replace('<','&lt;').replace('>','&gt;')
 
 def clean_logo(s):
+    # Remove legacy embedded logo payloads and point local image references at one clean SVG.
     s = re.sub(r'data:image/png;base64,[A-Za-z0-9+/=]+', LOGO, s)
-    s = s.replace('assets/insiyab-mark.webp', LOGO).replace('assets/insiyab-mark.png', LOGO)
-    s = s.replace('insiyab-mark-v4.svg?v=4','insiyab-mark-v4.svg?v=5')
+    s = re.sub(r'(?<=["\'])assets/insiyab-mark\.(?:webp|png)(?:\?[^"\']*)?', LOGO, s)
+    s = re.sub(r'(?<=["\'])assets/insiyab-mark-v4\.svg(?:\?v=\d+)?', LOGO, s)
     s = s.replace('type="image/png" href="'+LOGO+'"','type="image/svg+xml" href="'+LOGO+'"')
     return s
 
@@ -48,8 +53,29 @@ def inject_meta(s, fname, title, desc):
     s = re.sub(r'<title>.*?</title>', f'<title>{title}</title>', s, count=1, flags=re.S|re.I)
     s = re.sub(r'<meta\s+name=["\']description["\'][^>]*>\s*', '', s, flags=re.I)
     s = re.sub(r'<link\s+rel=["\']canonical["\'][^>]*>\s*', '', s, flags=re.I)
+    s = re.sub(r'<link\s+rel=["\']alternate["\'][^>]*hreflang=[^>]*>\s*', '', s, flags=re.I)
     s = re.sub(r'<meta\s+(?:property=["\']og:[^"\']+["\']|name=["\']twitter:[^"\']+["\'])[^>]*>\s*', '', s, flags=re.I)
-    block = [f'<meta name="description" content="{escape_attr(desc)}">',f'<link rel="canonical" href="{canonical}">','<meta property="og:locale" content="ar_SA">',f'<meta property="og:type" content="{"article" if fname.startswith("blog-") else "website"}">','<meta property="og:site_name" content="InsiyabTech">',f'<meta property="og:title" content="{escape_attr(title)}">',f'<meta property="og:description" content="{escape_attr(desc)}">',f'<meta property="og:url" content="{canonical}">',f'<meta property="og:image" content="{OGIMG}">','<meta name="twitter:card" content="summary_large_image">',f'<meta name="twitter:title" content="{escape_attr(title)}">',f'<meta name="twitter:description" content="{escape_attr(desc)}">',f'<meta name="twitter:image" content="{OGIMG}">','<script type="application/ld+json">'+json.dumps(ORG,ensure_ascii=False,separators=(',',':'))+'</script>']
+    # Remove schema blocks previously generated by this script so repeated deploys stay clean.
+    s = re.sub(r'<script\s+type=["\']application/ld\+json["\'][^>]*>.*?https://schema\.org.*?</script>\s*', '', s, flags=re.S|re.I)
+    s = re.sub(r'<meta\s+name=["\']referrer["\'][^>]*>\s*', '', s, flags=re.I)
+
+    block = [
+        f'<meta name="description" content="{escape_attr(desc)}">',
+        '<meta name="referrer" content="strict-origin-when-cross-origin">',
+        f'<link rel="canonical" href="{canonical}">',
+        '<meta property="og:locale" content="ar_SA">',
+        f'<meta property="og:type" content="{"article" if fname.startswith("blog-") else "website"}">',
+        '<meta property="og:site_name" content="InsiyabTech">',
+        f'<meta property="og:title" content="{escape_attr(title)}">',
+        f'<meta property="og:description" content="{escape_attr(desc)}">',
+        f'<meta property="og:url" content="{canonical}">',
+        f'<meta property="og:image" content="{OGIMG}">',
+        '<meta name="twitter:card" content="summary_large_image">',
+        f'<meta name="twitter:title" content="{escape_attr(title)}">',
+        f'<meta name="twitter:description" content="{escape_attr(desc)}">',
+        f'<meta name="twitter:image" content="{OGIMG}">',
+        '<script type="application/ld+json">'+json.dumps(ORG,ensure_ascii=False,separators=(',',':'))+'</script>'
+    ]
     if fname == 'index.html':
         block += [f'<link rel="alternate" hreflang="ar" href="{canonical}">',f'<link rel="alternate" hreflang="en" href="{canonical}">',f'<link rel="alternate" hreflang="x-default" href="{canonical}">']
     if fname.startswith('blog-'):
@@ -59,6 +85,14 @@ def inject_meta(s, fname, title, desc):
         block.append('<script type="application/ld+json">'+json.dumps(article,ensure_ascii=False,separators=(',',':'))+'</script>')
     return s.replace('</head>','\n'.join(block)+'\n</head>',1)
 
+def security_cleanup(s):
+    # Add noopener to links opening new tabs without changing their targets.
+    def repl(m):
+        tag=m.group(0)
+        if re.search(r'\brel=',tag,re.I): return tag
+        return tag[:-1]+' rel="noopener noreferrer">'
+    return re.sub(r'<a\b[^>]*\btarget=["\']_blank["\'][^>]*>', repl, s, flags=re.I)
+
 def process(p):
     fname=p.name
     if fname not in META: return
@@ -66,10 +100,12 @@ def process(p):
     s=clean_logo(s)
     if fname in LEGACY:
         s=re.sub(r'<ul class="nav-links">.*?</ul>',NAV,s,count=1,flags=re.S|re.I)
-        if 'insiyab-global-polish' not in s: s=s.replace('</head>',POLISH+'\n</head>',1)
+        s=re.sub(r'<style id="insiyab-global-polish">.*?</style>\s*','',s,flags=re.S|re.I)
+        s=s.replace('</head>',POLISH+'\n</head>',1)
     if GA_ID not in s: s=s.replace('</head>',GA+'\n</head>',1)
     s=inject_meta(s,fname,*META[fname])
-    p.write_text(clean_logo(s),encoding='utf-8')
+    s=security_cleanup(s)
+    p.write_text(s,encoding='utf-8')
 
 for f in ROOT.glob('*.html'): process(f)
 urls=[]
