@@ -30,26 +30,19 @@ jobs:
           set -euo pipefail
           rm -rf _site
           mkdir -p _site
-
-          # Keep the currently published supporting pages/assets for a safe cutover.
           wget --quiet --recursive --level=3 --page-requisites --convert-links --adjust-extension --no-parent --no-host-directories --directory-prefix=_site https://insiyabtech.com.sa/ || true
-
-          # Reassemble the approved V29 homepage from verified UTF-8 chunks.
           cat payload_text/index/part*.txt > _site/index.html
-
-          # Use the approved Solutions page directly from the repository.
           cp solutions.html _site/solutions.html
-
           mkdir -p _site/assets
           cp assets/insiyab-mark.webp _site/assets/insiyab-mark.webp
           touch _site/.nojekyll
-
-          # Integrity checks: do not deploy if a byte differs from the approved files.
           echo "7742d95149c03c89df9b688f3e5ebabd4dd8ee6d3f2da1ba7c95af4b738ee609  _site/index.html" | sha256sum -c -
           echo "fb3b32e6a1ed82bc8ebc35839c0c457e2a4a9e340edc1199560608115929ef00  _site/solutions.html" | sha256sum -c -
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
+        with:
+          enablement: true
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
