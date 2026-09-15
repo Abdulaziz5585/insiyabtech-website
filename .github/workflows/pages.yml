@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -24,35 +24,59 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Build site
+      - name: Build, optimize and validate site
         shell: bash
         run: |
           set -euo pipefail
           rm -rf _site
           mkdir -p _site
-          wget --quiet --recursive --level=3 --page-requisites --convert-links --adjust-extension --no-parent --no-host-directories --directory-prefix=_site https://insiyabtech.com.sa/ || true
 
-          # Rebuild the controlled pages from the repository sources.
-          cat payload_text/index/part*.txt > _site/index.html
-          cp solutions.html _site/solutions.html
+          required=(index.html about.html services.html solutions.html contact.html blog.html guide.html privacy.html terms.html blog-clinic-agent.html blog-n8n-vs-make.html blog-agent-vs-employee.html)
+          have_sources=true
+          for f in "${required[@]}"; do
+            if [ ! -s "$f" ]; then have_sources=false; break; fi
+          done
 
-          # Verify source integrity before deployment-only rewrites.
-          echo "7742d95149c03c89df9b688f3e5ebabd4dd8ee6d3f2da1ba7c95af4b738ee609  _site/index.html" | sha256sum -c -
-          echo "fb3b32e6a1ed82bc8ebc35839c0c457e2a4a9e340edc1199560608115929ef00  _site/solutions.html" | sha256sum -c -
+          if [ "$have_sources" = true ]; then
+            echo "Using full site source stored in GitHub"
+            cp -v *.html _site/
+          else
+            echo "One-time migration: importing current legacy pages"
+            wget --quiet --recursive --level=3 --page-requisites --convert-links --adjust-extension --no-parent --no-host-directories --directory-prefix=_site https://insiyabtech.com.sa/ || true
+            cat payload_text/index/part*.txt > _site/index.html
+            cp solutions.html _site/solutions.html
+          fi
 
           cp CNAME _site/CNAME
           mkdir -p _site/assets
           cp assets/insiyab-mark.webp _site/assets/insiyab-mark.webp
           cp assets/insiyab-mark.png _site/assets/insiyab-mark.png
           cp assets/insiyab-mark-v4.svg _site/assets/insiyab-mark-v4.svg
-
-          # Force every page to use one clean, cache-busted logo asset.
-          find _site -type f -name '*.html' -print0 | xargs -0 sed -i \
-            -e 's#assets/insiyab-mark\.webp#assets/insiyab-mark-v4.svg?v=4#g' \
-            -e 's#assets/insiyab-mark\.png#assets/insiyab-mark-v4.svg?v=4#g' \
-            -e 's#type="image/png" href="assets/insiyab-mark-v4\.svg?v=4"#type="image/svg+xml" href="assets/insiyab-mark-v4.svg?v=4"#g'
-
           touch _site/.nojekyll
+
+          python3 scripts/postprocess.py _site
+
+          for f in "${required[@]}"; do test -s "_site/$f"; done
+          test -s _site/robots.txt
+          test -s _site/sitemap.xml
+          ! grep -R "data:image/png;base64" _site/*.html
+          grep -q 'rel="canonical"' _site/index.html
+          grep -q 'application/ld+json' _site/index.html
+          grep -q 'G-6P2CM4PPHQ' _site/solutions.html
+          grep -q 'insiyab-mark-v4.svg?v=5' _site/index.html
+
+          if [ "$have_sources" = false ]; then
+            echo "Saving cleaned site pages into GitHub so future deploys no longer depend on the live domain"
+            cp _site/*.html .
+            cp _site/robots.txt _site/sitemap.xml .
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add *.html robots.txt sitemap.xml
+            if ! git diff --cached --quiet; then
+              git commit -m "Migrate optimized site sources into repository [skip ci]"
+              git push
+            fi
+          fi
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
