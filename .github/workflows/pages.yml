@@ -36,6 +36,7 @@ jobs:
           cp CNAME _site/CNAME
           mkdir -p _site/assets
           cp assets/insiyab-mark.webp _site/assets/insiyab-mark.webp
+          cp assets/insiyab-mark.png _site/assets/insiyab-mark.png
           touch _site/.nojekyll
           echo "7742d95149c03c89df9b688f3e5ebabd4dd8ee6d3f2da1ba7c95af4b738ee609  _site/index.html" | sha256sum -c -
           echo "fb3b32e6a1ed82bc8ebc35839c0c457e2a4a9e340edc1199560608115929ef00  _site/solutions.html" | sha256sum -c -
